@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#0b0c10">
+  <script src="/theme.js"></script>
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="MNCBG Events">
+  <link rel="apple-touch-icon" href="/apn/icons/icon-192.png">
+  <link rel="icon" href="/apn/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/apn/app.css" />
+  <title>All Pints North — Beer & Beverage List</title>
+  <script src="/vendor/jquery.min.js"></script>
+
+  <style>
+    .hscroll-top{
+      display:none;
+      height:14px;
+      overflow-x:auto;
+      overflow-y:hidden;
+      border:1px solid rgba(255,255,255,.12);
+      border-bottom:none;
+      border-top-left-radius: var(--radius-xl);
+      border-top-right-radius: var(--radius-xl);
+      background: linear-gradient(180deg, var(--panel), var(--panel-2));
+      position: sticky;
+      top: 0;
+      z-index: 6;
+    }
+    .hscroll-spacer{ height:1px; }
+    .table-section .table-wrapper{
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    /* Mobile horizontal-scroll hint: real sticky children for BOTH edges */
+    @media (hover: none) and (pointer: coarse){
+      .table-wrapper{ position: relative; }
+      .hfade{
+        position: -webkit-sticky; /* iOS */
+        position: sticky;
+        top: 0; bottom: 0;
+        width: 30px;
+        z-index: 7;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity .2s ease;
+      }
+      .hfade-left{
+        left: 0;
+        background: linear-gradient(90deg, var(--bg, #0b0c10) 0%, rgba(0,0,0,0) 100%);
+      }
+      .hfade-right{
+        right: 0;
+        background: linear-gradient(270deg, var(--bg, #0b0c10) 0%, rgba(0,0,0,0) 100%);
+      }
+      .table-wrapper.hscroll-need.has-left  .hfade-left{  opacity:1; }
+      .table-wrapper.hscroll-need.has-right .hfade-right{ opacity:1; }
+    }
+
+    /* ===== Modern checkbox + selected row highlight ===== */
+    input.selectItem{
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px; height: 20px;
+      border-radius: 6px;
+      border: 1.5px solid var(--chip-border);
+      background: var(--chip-bg);
+      display: inline-grid; place-items: center;
+      cursor: pointer;
+      transition: border-color .15s ease, box-shadow .15s ease, background-color .15s ease, transform .06s ease;
+    }
+    input.selectItem::after{
+      content:"";
+      width: 12px; height: 12px; border-radius: 4px;
+      background: linear-gradient(180deg, rgba(97,208,149,1), rgba(79,209,197,.9));
+      transform: scale(0);
+      transition: transform .12s ease;
+    }
+    input.selectItem:hover{ border-color: rgba(79,209,197,.7); }
+    input.selectItem:active{ transform: translateY(1px); }
+    input.selectItem:focus-visible{ outline: 2px solid var(--accent); outline-offset: 2px; }
+
+    input.selectItem:checked{
+      border-color: rgba(97,208,149,.85);
+      background: rgba(97,208,149,.15);
+      box-shadow: 0 0 0 3px rgba(97,208,149,.22);
+    }
+    input.selectItem:checked::after{ transform: scale(1); }
+
+    tbody tr.is-selected{ background: rgba(97,208,149,.13); }
+    tbody tr.is-selected td{ border-bottom-color: rgba(97,208,149,.35); }
+
+    /* One-time mobile “Swipe to scroll →” bubble */
+    .table-wrapper{ position: relative; }
+    .hscroll-bubble{
+      position:absolute; top:10px; right:10px; z-index:8;
+      padding:6px 10px; border-radius:999px;
+      background: rgba(0,0,0,.55);
+      border:1px solid rgba(255,255,255,.18);
+      color: var(--text); font-weight:700; font-size:12px;
+      white-space: nowrap; pointer-events:none; opacity:0;
+      animation: hintPulse 1.6s ease-in-out 0s 3;
+    }
+    .table-wrapper.show-bubble .hscroll-bubble{ opacity:1; }
+    @keyframes hintPulse{
+      0%{ transform: translateX(0); opacity:.2; }
+      50%{ transform: translateX(-6px); opacity:1; }
+      100%{ transform: translateX(0); opacity:.2; }
+    }
+    @media (hover:hover) and (any-pointer:fine){ .hscroll-bubble{ display:none; } }
+  </style>
+  <link rel="stylesheet" href="/theme.css" />
+  <link rel="stylesheet" href="/unified.css" />
+</head>
+
+<body class="festival-page event-apn">
+  <!-- Appbar -->
+  <div class="appbar">
+    <div class="appbar-inner">
+      <a class="logo-dot" href="/" aria-label="Back to Events"></a>
+      <div class="app-title-wrap">
+        <div class="title">All Pints North 2026</div>
+        <div class="subtitle">Beer &amp; Beverage List</div>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav class="topnav" aria-label="Primary">
+        <a class="events-home-link" href="/">← Events</a>
+        <a href="/apn/index.html">Information</a>
+        <a href="/apn/list.html">Beer &amp; Beverage List</a>
+        <a href="/apn/guide.html">Guide</a>
+        <a href="/apn/map.html">Map</a>
+        <a href="https://www.mncraftbrew.org/all-pints-north/" target="_blank" rel="noopener">Festival Website</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="page">
+    <!-- Intro -->
+    <div class="card intro">
+      <p>
+        COMING SOON!
+      </p>
+    </div>
+
+
+  <!-- Unified nav toggle + active link -->
+  <script>
+  (function () {
+    // --- NAV TOGGLE ---
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.topnav');
+    if (btn && nav) {
+      btn.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      document.addEventListener('click', (e) => {
+        if (!nav.contains(e.target) && !btn.contains(e.target)) {
+          nav.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          nav.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+
+    // --- ACTIVE LINK (handles extensionless routes like "/list") ---
+    function normalizeToFile(pathname) {
+      if (!pathname) return 'index.html';
+      pathname = pathname.replace(/\/+$/, '');
+      if (pathname === '' || pathname === '/') return 'index.html';
+      let seg = pathname.split('/').pop() || 'index.html';
+      if (!seg.includes('.')) seg = seg + '.html';
+      if (seg === 'index') seg = 'index.html';
+      return seg;
+    }
+
+    const currentFile = normalizeToFile(location.pathname);
+    document.querySelectorAll('.topnav a').forEach(a => a.classList.remove('active'));
+    document.querySelectorAll('.topnav a[href^="/"]').forEach(a => {
+      try {
+        const linkPath = new URL(a.getAttribute('href'), location.origin).pathname;
+        const linkFile = normalizeToFile(linkPath);
+        if (linkFile === currentFile) a.classList.add('active');
+      } catch {}
+    });
+  })();
+  </script>
+
+  <script src="/apn/csv-parser.js"></script>
+
+  <script>
+    // ====== Data + State ======
+    const CSV_URL = '/apn/beverages';
+    const STORAGE_VERSION = 'apn-v1';
+    const SELECTED_PREFIX = `selected_${STORAGE_VERSION}_`;
+    const RATING_PREFIX   = `rating_${STORAGE_VERSION}_`;
+    const NOTES_PREFIX    = `notes_${STORAGE_VERSION}_`;
+
+    let tableData = [];
+    let displayedData = [];
+    let currentSortCol = null;  // 1..8
+    let currentSortAsc = true;
+    const indexById = Object.create(null);
+    const fieldByCol = { 1:'brewery', 2:'booth', 3:'region', 4:'beverageName', 5:'beverageType', 6:'beverageStyle', 7:'collab', 8:'abv' };
+
+    function makeStableId(brewery, beverageName){
+      return `${String(brewery).trim().toLowerCase()}::${String(beverageName).trim().toLowerCase()}`;
+    }
+
+    $(document).ready(function () {
+      $.get(CSV_URL, function (data) {
+        const rows = APNCsv.parse(data);
+        const headerMap = APNCsv.headerMap(rows.shift() || []);
+
+        const breweries = new Set(), beverageTypes = new Set(), beverageStyles = new Set();
+        const abvs = new Set(), regions = new Set(), collabs = new Set();
+
+        rows.forEach((cols) => {
+          if (!cols || cols.every(value => !String(value).trim())) return;
+
+          const brewery = APNCsv.value(cols, headerMap, 'Brewery', 2);
+          const beverageName = APNCsv.value(cols, headerMap, 'Beverage Name', 3);
+          const beverageType = APNCsv.value(cols, headerMap, 'Beverage Type', 4);
+          const beverageStyle = APNCsv.value(cols, headerMap, 'Beverage Style', 5);
+          const abv = APNCsv.value(cols, headerMap, 'ABV/mg', 6);
+          const url = APNCsv.value(cols, headerMap, 'URL', 7);
+          const booth = APNCsv.value(cols, headerMap, 'Booth', 8);
+          const region = APNCsv.value(cols, headerMap, 'Region', 9);
+          const collab = APNCsv.value(cols, headerMap,
+            ['Collaboration?', 'Collaboration', 'Collaboration Brew'], 10);
+
+          const id = makeStableId(brewery, beverageName);
+          indexById[id] = tableData.length;
+
+
+          tableData.push({
+            selected: localStorage.getItem(SELECTED_PREFIX + id) === 'true',
+            brewery, booth, region, beverageName, beverageType, beverageStyle, collab, abv, url, id
+          });
+
+          breweries.add(brewery);
+          regions.add(region);
+          beverageTypes.add(beverageType);
+          beverageStyles.add(beverageStyle);
+          collabs.add(collab);
+          abvs.add(abv);
+        });
+
+        populateDropdown('#brewery', breweries, 'Brewery');
+        populateDropdown('#region', regions, 'Region');
+        populateDropdown('#beverageType', beverageTypes, 'Beverage Type');
+        populateDropdown('#beverageStyle', beverageStyles, 'Beverage Style');
+        populateDropdown('#collab', collabs, 'Collaboration?');
+        populateDropdown('#abv', abvs, 'ABV/mg');
+
+        displayedData = tableData.slice();
+        sortTable(1);
+
+        $('select').change(function () {
+          displayedData = filterData(tableData);
+          const col = currentSortCol;
+          const dir = currentSortAsc;
+          currentSortCol = null; currentSortAsc = dir;
+          sortTable(col || 1);
+        });
+
+        $('#resetButton').click(function () {
+          $('#warningMessage').remove();
+          $('select').val('');
+          displayedData = tableData.slice();
+          currentSortCol = null; currentSortAsc = true;
+          sortTable(1);
+        });
+
+        $('#selectAllHeader').click(function () {
+          const allChecked = $('.selectItem:checked').length === $('.selectItem').length;
+          $('.selectItem').prop('checked', !allChecked);
+          $('.selectItem').each(function () {
+            const displayedIndex = $(this).data('index');
+            const id = displayedData[displayedIndex].id;
+            const fullDataIndex = indexById[id];
+            const checked = $(this).is(':checked');
+            tableData[fullDataIndex].selected = checked;
+            localStorage.setItem(SELECTED_PREFIX + id, checked ? 'true' : 'false');
+            $(this).closest('tr').toggleClass('is-selected', checked); // keep row highlight in sync
+          });
+        });
+
+        // ----- Sample List navigation -----
+        $('#sampleListButton').off('click').on('click', function () {
+          sessionStorage.removeItem('apn_sample_items');
+          localStorage.removeItem('apn_printer_items');
+
+          const selectedItems = tableData
+            .filter(r => localStorage.getItem(SELECTED_PREFIX + r.id) === 'true')
+            .map(({brewery,booth,region,beverageName,id}) => ({brewery,booth,region,beverageName,id}));
+
+          if (selectedItems.length === 0) {
+            if (!$('#warningMessage').length) {
+              $('.controls').after('<div id="warningMessage" style="color:#f56565; text-align:center; margin-top:10px; font-weight:700;">No items selected!</div>');
+            }
+            return;
+          }
+
+          $('#warningMessage').remove();
+          sessionStorage.setItem('apn_sample_items', JSON.stringify(selectedItems));
+          localStorage.setItem('apn_printer_items', JSON.stringify(selectedItems));
+          window.location.href = '/apn/sample-list.html';
+        });
+
+      }).fail(function () {
+        console.error("Failed to fetch the CSV file.");
+      });
+
+      fitTableToViewport();
+      setupPageScrollLock();
+      setupTopScroller();
+      window.addEventListener('load', recomputeLayout);
+      window.addEventListener('resize', recomputeLayout);
+      window.addEventListener('orientationchange', recomputeLayout);
+      const footerEl = document.getElementById('footer');
+      footerEl.addEventListener('transitionend', (e) => { if (e.propertyName === 'height') recomputeLayout(); });
+      document.getElementById('mapImg')?.addEventListener('load', () => recomputeLayout());
+    });
+
+    // ====== Rendering / helpers ======
+    function displayTable(data) {
+      const tbody = $('#beverageTable tbody');
+      tbody.empty();
+
+      data.forEach((row, index) => {
+        const tr = `
+          <tr class="${row.selected ? 'is-selected' : ''}">
+            <td style="text-align:center;">
+              <input type="checkbox" class="selectItem" ${row.selected ? 'checked' : ''} data-index="${index}">
+            </td>
+            <td><a href="${row.url}" target="_blank" rel="noopener noreferrer">${row.brewery}</a></td>
+            <td>${row.booth}</td>
+            <td>${row.region}</td>
+            <td>${row.beverageName}</td>
+            <td>${row.beverageType}</td>
+            <td>${row.beverageStyle}</td>
+            <td>${row.collab}</td>
+            <td>${row.abv}</td>
+          </tr>`;
+        tbody.append(tr);
+      });
+
+      // sync highlight on change (captures click/keyboard/programmatic)
+      $('.selectItem').off('change').on('change', function () {
+        const displayedIndex = $(this).data('index');
+        const id = displayedData[displayedIndex].id;
+        const fullDataIndex = indexById[id];
+        const checked = $(this).is(':checked');
+        tableData[fullDataIndex].selected = checked;
+        localStorage.setItem(SELECTED_PREFIX + id, checked ? 'true' : 'false');
+        $(this).closest('tr').toggleClass('is-selected', checked);
+      });
+
+      recomputeLayout();
+    }
+
+    function populateDropdown(selector, dataSet, placeholder) {
+      let sortedData;
+      if (selector === '#abv') {
+        const thc = [], non = [];
+        Array.from(dataSet).forEach(v => (String(v).toUpperCase().startsWith('THC:') ? thc : non).push(v));
+        const sortedThc = thc.sort((a,b) => (parseInt(String(a).match(/\d+/),10)||0) - (parseInt(String(b).match(/\d+/),10)||0));
+        const sortedNon = Array.from(non).sort();
+        sortedData = sortedNon.concat(sortedThc);
+      } else if (selector === '#collab') {
+        sortedData = Array.from(dataSet).sort().reverse();
+      } else {
+        sortedData = Array.from(dataSet).sort();
+      }
+      const el = $(selector);
+      el.empty();
+      el.append(`<option value="">${placeholder}</option>`);
+      sortedData.forEach(v => el.append(`<option value="${v}">${v}</option>`));
+    }
+
+    function filterData(data) {
+      const selectedBrewery = $('#brewery').val();
+      const selectedRegion = $('#region').val();
+      const selectedBeverageType = $('#beverageType').val();
+      const selectedBeverageStyle = $('#beverageStyle').val();
+      const selectedCollab = $('#collab').val();
+      const selectedABV = $('#abv').val();
+
+      return data.filter(row =>
+        (!selectedBrewery || row.brewery === selectedBrewery) &&
+        (!selectedRegion || row.region === selectedRegion) &&
+        (!selectedBeverageType || row.beverageType === selectedBeverageType) &&
+        (!selectedBeverageStyle || row.beverageStyle === selectedBeverageStyle) &&
+        (!selectedCollab || row.collab === selectedCollab) &&
+        (!selectedABV || row.abv === selectedABV)
+      );
+    }
+
+    function sortTable(columnIndex) {
+      if (!columnIndex) columnIndex = 1;
+      if (currentSortCol === columnIndex) currentSortAsc = !currentSortAsc;
+      else { currentSortCol = columnIndex; currentSortAsc = true; }
+
+      const collabOrder = { "yes": 1, "no": 2 };
+      const abvOrder = ["tbd","0-4.9%","5-6.9%","7-8.9%","9-10.9%",">=11%","thc: 2 mg","thc: 3 mg","thc: 5 mg","thc: 10 mg"];
+      const key = fieldByCol[columnIndex];
+      if (!key) return;
+
+      const ascCmp = (a, b) => {
+        const aStr = (a[key] ?? "").toString().trim().toLowerCase();
+        const bStr = (b[key] ?? "").toString().trim().toLowerCase();
+        switch (columnIndex) {
+          case 2: {
+            const na = parseInt(a.booth, 10), nb = parseInt(b.booth, 10);
+            if (isNaN(na) && isNaN(nb)) return 0;
+            if (isNaN(na)) return 1;
+            if (isNaN(nb)) return -1;
+            return na - nb;
+          }
+          case 7: {
+            const oa = collabOrder[aStr] ?? 3, ob = collabOrder[bStr] ?? 3;
+            return oa - ob;
+          }
+          case 8: {
+            const ia = abvOrder.indexOf(aStr), ib = abvOrder.indexOf(bStr);
+            const ra = ia !== -1 ? ia : abvOrder.length;
+            const rb = ib !== -1 ? ib : abvOrder.length;
+            return ra - rb;
+          }
+          default:
+            return aStr.localeCompare(bStr);
+        }
+      };
+
+      displayedData.sort((a, b) => currentSortAsc ? ascCmp(a, b) : -ascCmp(a, b));
+      updateSortIndicators(columnIndex, currentSortAsc);
+      displayTable(displayedData);
+    }
+
+    function updateSortIndicators(activeCol, asc) {
+      const ths = document.querySelectorAll('#beverageTable thead th.sortable');
+      ths.forEach(th => {
+        th.classList.remove('sort-active');
+        const ind = th.querySelector('.sort-ind');
+        if (ind) ind.textContent = '↕';
+        th.removeAttribute('aria-sort');
+      });
+      const target = ths[activeCol - 1];
+      if (!target) return;
+      target.classList.add('sort-active');
+      target.setAttribute('aria-sort', asc ? 'ascending' : 'descending');
+      const ind = target.querySelector('.sort-ind');
+      if (ind) ind.textContent = asc ? '▲' : '▼';
+    }
+
+    function fitTableToViewport() {
+      const main   = document.getElementById('mainScroll');
+      const footer = document.getElementById('footer');
+      const appbar = document.querySelector('.appbar');
+      if (!main || !footer || !appbar) return;
+
+      const appH = appbar.offsetHeight || 56;
+      const gap = 70;
+      const footerH = footer.offsetHeight || 0;
+      const paddingBottom = 8;
+
+      const maxAllowed = window.innerHeight - (appH + gap) - footerH - paddingBottom;
+      const minHeight = 240;
+      const h = Math.max(minHeight, maxAllowed);
+
+      main.style.maxHeight = h + 'px';
+      main.style.removeProperty('height');
+    }
+
+    function getPageOffsetTop(el) { let y = 0; while (el){ y += el.offsetTop; el = el.offsetParent; } return y; }
+
+    let recomputeLockY = null;
+    function setupPageScrollLock() {
+      const appbar = document.querySelector('.appbar');
+      const main   = document.getElementById('mainScroll');
+      if (!appbar || !main) return;
+
+      const appH = appbar.offsetHeight || 56;
+      const gap = 70;
+      let lockYStatic = 0;
+      let locked = false;
+
+      function computeLockYStatic() {
+        const wrapperPageTop = getPageOffsetTop(main);
+        lockYStatic = Math.round(wrapperPageTop - appH - gap);
+      }
+      function clampPageToLock() { if (window.scrollY > lockYStatic) window.scrollTo({ top: lockYStatic, left: 0 }); }
+      function updateLockState() {
+        if (window.scrollY >= lockYStatic) { if (!locked) { locked = true; clampPageToLock(); } }
+        else { locked = false; }
+      }
+
+      window.addEventListener('wheel', (e) => {
+        if (!locked) return;
+        const delta = e.deltaY;
+        const atTop = main.scrollTop <= 0;
+        const atBottom = Math.ceil(main.scrollTop + main.clientHeight) >= main.scrollHeight;
+        if ((delta > 0 && !atBottom) || (delta < 0 && !atTop)) { e.preventDefault(); main.scrollTop += delta; }
+        else if (delta < 0 && atTop) { locked = false; }
+        else { e.preventDefault(); clampPageToLock(); }
+      }, { passive: false });
+
+      window.addEventListener('keydown', (e) => {
+        if (!locked) return;
+        const key = e.key, line = 40, page = main.clientHeight;
+        if (key === 'ArrowDown'){ e.preventDefault(); main.scrollTop += line; }
+        else if (key === 'ArrowUp'){ e.preventDefault(); main.scrollTop -= line; }
+        else if (key === 'PageDown'){ e.preventDefault(); main.scrollTop += page; }
+        else if (key === 'PageUp'){ e.preventDefault(); main.scrollTop -= page; }
+        else if (key === 'End'){ e.preventDefault(); main.scrollTop = main.scrollHeight; }
+        else if (key === 'Home'){ e.preventDefault(); main.scrollTop = 0; }
+      });
+
+      window.addEventListener('scroll', () => { updateLockState(); if (locked) clampPageToLock(); });
+
+      function doRecompute(){ computeLockYStatic(); updateLockState(); }
+      doRecompute();
+      recomputeLockY = doRecompute;
+      setTimeout(doRecompute, 300);
+    }
+
+    // === Top scroller setup ===
+    function setupTopScroller(){
+      const top = document.getElementById('hscrollTop');
+      const spacer = document.getElementById('hscrollSpacer');
+      const main = document.getElementById('mainScroll');
+      if (!top || !spacer || !main) return;
+
+      let syncing = false;
+
+      function updateWidths(){
+        spacer.style.width = main.scrollWidth + 'px';
+        const overflow = main.scrollWidth > main.clientWidth + 2;
+        const hasCoarse = window.matchMedia('(any-pointer: coarse)').matches;
+        const hasHoverFine = window.matchMedia('(hover: hover) and (any-pointer: fine)').matches;
+        const looksDesktop = hasHoverFine || (!hasCoarse && !('ontouchstart' in window));
+        top.style.display = (overflow && looksDesktop) ? 'block' : 'none';
+        if (!syncing){
+          syncing = true;
+          top.scrollLeft = main.scrollLeft;
+          syncing = false;
+        }
+      }
+
+      top.addEventListener('scroll', () => {
+        if (syncing) return;
+        syncing = true;
+        main.scrollLeft = top.scrollLeft;
+        syncing = false;
+      });
+
+      main.addEventListener('scroll', () => {
+        if (syncing) return;
+        syncing = true;
+        top.scrollLeft = main.scrollLeft;
+        syncing = false;
+      });
+
+      window.addEventListener('resize', updateWidths);
+      if ('ResizeObserver' in window){
+        const ro = new ResizeObserver(updateWidths);
+        ro.observe(main);
+        const table = document.getElementById('beverageTable');
+        table && ro.observe(table);
+      }
+
+      updateWidths();
+      window.__updateTopScroller = updateWidths;
+    }
+
+    function recomputeLayout(){
+      fitTableToViewport();
+      if (typeof recomputeLockY === 'function') recomputeLockY();
+      if (typeof window.__updateTopScroller === 'function') window.__updateTopScroller();
+    }
+  </script>
+
+  <script>
+    // Footer Map toggle
+    const footer = document.getElementById('footer');
+    const toggleFooter = document.getElementById('toggleFooter');
+    const leftText = document.getElementById('leftText');
+    const footerHeader = document.querySelector('.footer-header');
+    const footerContent = document.getElementById('footerContent');
+
+    toggleFooter.textContent = '▲';
+    leftText.textContent = 'Show';
+
+    footerHeader.addEventListener('click', () => {
+      footer.classList.toggle('expanded');
+      const open = footer.classList.contains('expanded');
+      toggleFooter.textContent = open ? '▼' : '▲';
+      leftText.textContent = open ? 'Hide' : 'Show';
+      if (typeof recomputeLayout === 'function') recomputeLayout();
+    });
+
+    (function () {
+      if (!footer || !footerContent) return;
+      footerContent.addEventListener('wheel', function (e) {
+        if (!footer.classList.contains('expanded')) return;
+        const atTop = footerContent.scrollTop === 0 && e.deltaY < 0;
+        const atBottom = Math.ceil(footerContent.scrollTop + footerContent.clientHeight) >= footerContent.scrollHeight && e.deltaY > 0;
+        if (!(atTop || atBottom)) e.stopPropagation();
+      }, { passive: true });
+    })();
+  </script>
+
+  <script src="/update-banner.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js', { scope: '/' })
+          .catch(err => console.log('SW registration failed:', err));
+      });
+    }
+  </script>
+
+  <!-- Mobile scroll hint glue (new) -->
+  <script>
+  (function(){
+    const main = document.getElementById('mainScroll');
+    if (!main) return;
+
+    // Ensure sticky fade overlays exist (real elements, not pseudo)
+    function ensureFades(){
+      if (!main.querySelector('.hfade-left')){
+        const lf = document.createElement('div');
+        lf.className = 'hfade hfade-left';
+        main.insertBefore(lf, main.firstChild);
+      }
+      if (!main.querySelector('.hfade-right')){
+        const rf = document.createElement('div');
+        rf.className = 'hfade hfade-right';
+        main.appendChild(rf);
+      }
+    }
+    // Only inject on touch-centric devices
+    if (window.matchMedia('(hover: none) and (pointer: coarse)').matches){
+      ensureFades();
+    }
+
+    const KEY = 'apn:hscrollHintHidden:' + location.pathname;
+    let bubbleTimer = null;
+    let lastLeft = 0;
+
+    function ensureBubble(){
+      let b = main.querySelector('.hscroll-bubble');
+      if (!b){
+        b = document.createElement('div');
+        b.className = 'hscroll-bubble';
+        b.textContent = 'Swipe to scroll →';
+        main.appendChild(b);
+      }
+      return b;
+    }
+    function showBubble(){
+      ensureBubble();
+      main.classList.add('show-bubble');
+      clearTimeout(bubbleTimer);
+      bubbleTimer = setTimeout(() => main.classList.remove('show-bubble'), 3000);
+    }
+    function hideBubble(sticky){
+      main.classList.remove('show-bubble');
+      clearTimeout(bubbleTimer);
+      if (sticky) sessionStorage.setItem(KEY, '1');
+    }
+
+    function updateHint(){
+      const need = main.scrollWidth > main.clientWidth + 2;
+      const maxScrollLeft = Math.max(0, main.scrollWidth - main.clientWidth);
+      const hasLeft = main.scrollLeft > 2;
+      const hasRight = main.scrollLeft < (maxScrollLeft - 2);
+
+      main.classList.toggle('hscroll-need', need);
+      main.classList.toggle('has-left',  need && hasLeft);
+      main.classList.toggle('has-right', need && hasRight);
+
+      const stickyHidden = sessionStorage.getItem(KEY) === '1';
+      if (need && !hasLeft && hasRight && !stickyHidden){
+        showBubble();
+      } else {
+        main.classList.remove('show-bubble');
+      }
+    }
+
+    main.addEventListener('scroll', () => {
+      if (Math.abs(main.scrollLeft - lastLeft) > 8){
+        hideBubble(true);
+      }
+      lastLeft = main.scrollLeft;
+      updateHint();
+    }, {passive:true});
+
+    window.addEventListener('resize', () => { ensureFades(); updateHint(); }, {passive:true});
+    window.addEventListener('orientationchange', () => { ensureFades(); updateHint(); }, {passive:true});
+    if ('ResizeObserver' in window){
+      const ro = new ResizeObserver(() => { ensureFades(); updateHint(); });
+      ro.observe(main);
+      const tbl = document.getElementById('beverageTable');
+      if (tbl) ro.observe(tbl);
+    }
+    ensureFades();
+    updateHint();
+  })();
+  </script>
+</body>
+</html>
