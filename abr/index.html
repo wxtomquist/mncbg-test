@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#0b0c10">
+  <script src="/theme.js"></script>
+  <!-- iOS/PWA meta -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="MNCBG Events">
+  <link rel="apple-touch-icon" href="/abr/icons/icon-192.png">
+  <link rel="icon" href="/abr/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/abr/app.css" />
+  <title>Autumn Brew Review — Information</title>
+
+  <!-- Page-local visual polish -->
+  <style>
+    /* Make hero content feel vertically centered in the banner (desktop baseline) */
+    .hero-inner{
+      min-height: clamp(300px, 42vw, 520px);
+      display: grid;
+      align-items: center;
+    }
+    .hero-card.glass{
+      background: linear-gradient(180deg, rgba(32,37,54,.50), rgba(38,45,65,.44));
+      backdrop-filter: saturate(160%) blur(6px);
+      -webkit-backdrop-filter: saturate(160%) blur(8px);
+      border: 1px solid rgba(255,255,255,.16);
+      /* desktop: slight nudge up for visual centering */
+      transform: translateY(-4%);
+    }
+
+    /* Mobile: lower the card slightly & give the hero a touch more height */
+    @media (max-width: 640px){
+      .hero-bleed{ min-height: clamp(300px, 52vh, 560px); }
+      .hero-inner{ align-items: center; }
+      .hero-card.glass{ transform: translateY(0%); }
+    }
+
+    /* Social icon chips */
+    .social-icons{ display:inline-flex; gap:10px; vertical-align:middle; margin:0 10px; }
+    .social-icons a{
+      display:inline-flex; align-items:center; justify-content:center;
+      width:26px; height:26px; border-radius:6px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+      transition: transform .08s ease, background-color .2s ease, border-color .2s ease;
+    }
+    .social-icons a:hover{ transform:translateY(-1px); background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.22); }
+    .social-icons img{ width:18px; height:18px; display:block; }
+  </style>
+  <link rel="stylesheet" href="/theme.css" />
+  <link rel="stylesheet" href="/unified.css" />
+</head>
+<body class="festival-page event-abr">
+
+  <!-- Appbar -->
+  <div class="appbar">
+    <div class="appbar-inner">
+      <a class="logo-dot" href="/" aria-label="Back to Events"></a>
+      <div class="app-title-wrap">
+        <div class="title">Autumn Brew Review 2026</div>
+        <div class="subtitle">Information</div>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav class="topnav" aria-label="Primary">
+        <a class="events-home-link" href="/">← Events</a>
+        <a href="/abr/index.html">Information</a>
+        <a href="/abr/list.html">Beer &amp; Beverage List</a>
+        <a href="/abr/guide.html">Guide</a>
+        <a href="/abr/map.html">Map</a>
+        <a href="https://www.mncraftbrew.org/autumn-brew-review/" target="_blank" rel="noopener">Festival Website</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero-bleed" aria-label="Autumn Brew Review cover">
+    <div class="hero-inner">
+      <div class="card glass hero-card">
+        <h1 class="lead" style="font-size:clamp(24px,3.2vw,34px);margin:0 0 6px 0">Autumn Brew Review</h1>
+        <p class="muted">Unlimited Samples at MN’s Longest-Running Brew Festival!</p>
+
+        <div class="badges" role="navigation" aria-label="Quick links">
+          <a class="cta" href="/abr/list.html">Beer &amp; Beverage List</a>
+          <a class="cta" href="/abr/guide.html">Festival Guide</a>
+          <a class="cta" href="/abr/map.html">Festival Map</a>
+          <a class="cta" href="https://www.mncraftbrew.org/autumn-brew-review/" target="_blank" rel="noopener">Festival Website</a>
+        </div>
+
+        <div style="height:4px"></div>
+
+        <p class="muted" style="margin:10px 0 0 0">
+          Our 25th annual Autumn Brew Review festival is aged to perfection, and so are the beers! Sip unlimited craft brews while you enjoy live music, entertainment, games, shops, food trucks, and more. If you love fall and winter craft brews, this is the fest for you. 
+        </p>
+
+        <p class="muted" style="margin:10px 0 0 0">
+          Tag us on social!
+          <span class="social-icons">
+            <a href="https://www.facebook.com/MinnesotaCraftBrewersGuild/" target="_blank" rel="noopener" aria-label="Facebook">
+              <img src="/abr/icons/facebook_white_28dp.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/mncraftbrewersguild/" target="_blank" rel="noopener" aria-label="Instagram">
+              <img src="/abr/icons/instagram_white_28dp.png" alt="Instagram">
+            </a>
+          </span>
+          <span class="badge">@mncraftbrewersguild</span>
+          <span class="badge">#autumnbrewreview</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main page content -->
+  <div class="page">
+    <div class="card glass">
+      <h2 class="lead" style="font-size:clamp(20px,2.6vw,26px);margin:0 0 6px 0">Event Details</h2>
+      <p>
+        <b>Saturday, October 10, 2026</b><br>
+        1:30 p.m. - 5:00 p.m.
+      </p>
+      <div class="badges">
+        <a class="cta" href="https://form.jotform.com/212024464318044" target="_blank" rel="noopener">
+          Code of Conduct Reporting Tool
+        </a>
+      </div>
+    </div>
+</div>
+
+  <!-- Nav toggle + active state -->
+  <script>
+  (function () {
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.topnav');
+
+    function setActiveNav(){
+      function normalizeToFile(pathname) {
+        if (!pathname) return 'index.html';
+        pathname = pathname.replace(/\/+$/, '');
+        if (pathname === '' || pathname === '/') return 'index.html';
+        const seg = pathname.split('/').pop();
+        return seg || 'index.html';
+      }
+      const currentFile = normalizeToFile(location.pathname);
+      document.querySelectorAll('.topnav a').forEach(a => a.classList.remove('active'));
+      document.querySelectorAll('.topnav a[href^="/"]').forEach(a => {
+        try {
+          const linkPath = new URL(a.getAttribute('href'), location.origin).pathname;
+          const linkFile = normalizeToFile(linkPath);
+          if (linkFile === currentFile) a.classList.add('active');
+        } catch {}
+      });
+    }
+
+    if (btn && nav) {
+      btn.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      document.addEventListener('click', (e) => {
+        if (!nav.contains(e.target) && !btn.contains(e.target)) {
+          nav.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          nav.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+
+    // Run on load AND when restored from BFCache (browser back/forward)
+    setActiveNav();
+    window.addEventListener('pageshow', setActiveNav);
+  })();
+  </script>
+
+  <script src="/update-banner.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js', { scope: '/' })
+          .catch(err => console.log('SW registration failed:', err));
+      });
+    }
+  </script>
+</body>
+</html>

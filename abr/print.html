@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Autumn Brew Review 2026 — My Sample List</title>
+  <style>
+    body { font-family: Arial, sans-serif; color:#000; background:#fff; }
+    .print-header { margin: 0 0 16px; }
+    .print-header h1 { margin: 0; font-size: 24px; }
+    .print-header p { margin: 4px 0 0; font-size: 16px; font-weight: 700; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 8px 10px; text-align: left; vertical-align: top; color:#000; }
+    th { font-weight: bold; border-bottom: 1px solid #000; }
+    td { border-bottom: 1px solid #d3d3d3; }
+    .controls { margin: 10px 0 14px; }
+    .controls button {
+      font-weight: 800; font-size: 17px;
+      border: 2px solid lightgray; border-radius: 12px;
+      padding: 10px 18px; background: #f0f0f0;
+      margin-right: 8px; margin-bottom: 12px; cursor: pointer; color:#000;
+    }
+    .thumbcell { width: 92px; text-align: center; }
+    .thumbcell img { max-width: 80px; max-height: 80px; border-radius: 4px; display: block; margin: 0 auto; }
+
+    @media print {
+      .controls { display:none; }
+      @page { margin: 12mm; }
+    }
+  </style>
+</head>
+<body>
+  <div class="controls">
+    <button id="backButton">← Back to Sample List</button>
+    <button id="printButton">Print | Save as PDF</button>
+  </div>
+
+  <header class="print-header">
+    <h1>Autumn Brew Review 2026</h1>
+    <p>My Sample List</p>
+  </header>
+
+  <table id="printerTable">
+    <thead>
+      <tr id="theadRow">
+        <th>Brewery</th>
+        <th>Booth</th>
+        <th>Region</th>
+        <th>Beverage Name</th>
+        <th>Rating</th>
+        <th>Notes</th>
+        <!-- Photo header injected when needed -->
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    // Keys & Photo DB
+    const STORAGE_VERSION = 'abr-v1';
+    const RATING_PREFIX   = `rating_${STORAGE_VERSION}_`;
+    const NOTES_PREFIX    = `notes_${STORAGE_VERSION}_`;
+    const PHOTO_DB_NAME   = 'abr-media';
+    const PHOTO_STORE     = 'photos';
+
+    function escapeHtml(s){ return String(s).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); }
+
+    function openMediaDB(){
+      return new Promise((resolve, reject) => {
+        const req = indexedDB.open(PHOTO_DB_NAME, 1);
+        req.onupgradeneeded = (e) => {
+          const db = e.target.result;
+          if (!db.objectStoreNames.contains(PHOTO_STORE)) db.createObjectStore(PHOTO_STORE);
+        };
+        req.onsuccess = () => resolve(req.result);
+        req.onerror = () => reject(req.error);
+      });
+    }
+    async function photoGet(id){
+      const db = await openMediaDB();
+      return new Promise((resolve, reject) => {
+        const tx = db.transaction(PHOTO_STORE, 'readonly');
+        const req = tx.objectStore(PHOTO_STORE).get(id);
+        req.onsuccess = () => resolve(req.result || null);
+        req.onerror = () => reject(req.error);
+      });
+    }
+
+    async function build(){
+      const items = JSON.parse(localStorage.getItem('abr_printer_items') || '[]');
+      const tbody = document.querySelector('#printerTable tbody');
+      const theadRow = document.getElementById('theadRow');
+      tbody.innerHTML = '';
+      if (!items.length) return;
+
+      let anyPhotos = false;
+      // Pre-create a Photo header cell but keep hidden until we detect at least one photo
+      const photoTh = document.createElement('th');
+      photoTh.textContent = 'Photo';
+      photoTh.className = 'thumbcell';
+      photoTh.style.display = 'none';
+      theadRow.appendChild(photoTh);
+
+      for (const item of items){
+        const rating = localStorage.getItem(RATING_PREFIX + item.id) || '';
+        const notes  = localStorage.getItem(NOTES_PREFIX  + item.id) || '';
+
+        const tr = document.createElement('tr');
+        tr.innerHTML =
+          '<td>' + escapeHtml(item.brewery || '') + '</td>' +
+          '<td>' + escapeHtml(item.booth || '') + '</td>' +
+          '<td>' + escapeHtml(item.region || '') + '</td>' +
+          '<td>' + escapeHtml(item.beverageName || '') + '</td>' +
+          '<td>' + (rating ? Number(rating).toFixed(1) : '') + '</td>' +
+          '<td>' + escapeHtml(notes) + '</td>';
+
+        // Photo cell (hidden by default, revealed if a blob exists)
+        const photoTd = document.createElement('td');
+        photoTd.className = 'thumbcell';
+        photoTd.style.display = 'none';
+        tr.appendChild(photoTd);
+        tbody.appendChild(tr);
+
+        // Try to fetch a photo
+        const blob = await photoGet(item.id);
+        if (blob){
+          anyPhotos = true;
+          const url = URL.createObjectURL(blob);
+          const img = document.createElement('img');
+          img.src = url;
+          img.onload = () => setTimeout(() => URL.revokeObjectURL(url), 30000);
+          photoTd.appendChild(img);
+          photoTd.style.display = '';
+        }
+      }
+
+      if (anyPhotos){
+        photoTh.style.display = '';
+      } else {
+        // remove empty column header if no photos at all
+        theadRow.removeChild(photoTh);
+      }
+    }
+
+    document.getElementById('printButton').addEventListener('click', () => window.print());
+    document.getElementById('backButton').addEventListener('click', () => { window.location.href = '/abr/sample-list.html'; });
+    build();
+  </script>
+
+  <script src="/update-banner.js"></script>
+</body>
+</html>
