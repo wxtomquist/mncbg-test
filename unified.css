@@ -1,0 +1,689 @@
+/* ============================================================
+   MNCBG Unified Design Preview
+   One app shell, event-specific accents.
+   Loaded after each section's existing CSS/theme layer.
+   ============================================================ */
+
+:root{
+  --u-bg:#090b10;
+  --u-bg-2:#0f131b;
+  --u-surface:#151a24;
+  --u-surface-2:#1b2230;
+  --u-surface-3:#222b3a;
+  --u-text:#f2f5f8;
+  --u-muted:#aeb8c5;
+  --u-line:rgba(255,255,255,.105);
+  --u-line-strong:rgba(255,255,255,.18);
+  --u-shadow:0 16px 44px rgba(0,0,0,.28);
+  --u-shadow-soft:0 8px 24px rgba(0,0,0,.18);
+  --u-radius:20px;
+  --u-radius-sm:14px;
+  --u-pill:999px;
+  --u-max:1200px;
+  --u-guild:#d9ad55;
+  --u-event:#4fd1c5;
+  --u-event-rgb:79,209,197;
+  --u-font:'Libre Franklin',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+}
+
+html[data-theme="light"]{
+  --u-bg:#edf1f5;
+  --u-bg-2:#f7f9fb;
+  --u-surface:#ffffff;
+  --u-surface-2:#f6f8fa;
+  --u-surface-3:#edf1f5;
+  --u-text:#17212b;
+  --u-muted:#637180;
+  --u-line:rgba(20,35,50,.11);
+  --u-line-strong:rgba(20,35,50,.18);
+  --u-shadow:0 16px 40px rgba(24,40,58,.12);
+  --u-shadow-soft:0 8px 22px rgba(24,40,58,.09);
+}
+
+body.guild-page{ --u-event:#d9ad55; --u-event-rgb:217,173,85; }
+body.event-apn{ --u-event:#f2a24a; --u-event-rgb:242,162,74; }
+body.event-abr{ --u-event:#d9682c; --u-event-rgb:217,104,44; }
+body.mbc-page{ --u-event:#4fc3d2; --u-event-rgb:79,195,210; }
+body.privacy-page{ --u-event:#d9ad55; --u-event-rgb:217,173,85; }
+
+body.guild-page,
+body.festival-page,
+body.mbc-page,
+body.privacy-page{
+  color:var(--u-text);
+  background:
+    radial-gradient(900px 600px at 8% -15%, rgba(var(--u-event-rgb),.09), transparent 68%),
+    radial-gradient(700px 480px at 96% 5%, rgba(217,173,85,.055), transparent 72%),
+    linear-gradient(180deg,var(--u-bg-2),var(--u-bg));
+  font-family:var(--u-font);
+}
+
+/* ---------- Shared interaction ---------- */
+body.guild-page a,
+body.festival-page a,
+body.mbc-page a,
+body.privacy-page a{ -webkit-tap-highlight-color:transparent; }
+
+.theme-toggle{
+  width:38px!important;
+  height:38px!important;
+  min-width:38px!important;
+  border-radius:12px!important;
+  border:1px solid var(--u-line-strong)!important;
+  background:rgba(255,255,255,.055)!important;
+  color:var(--u-text)!important;
+  box-shadow:none!important;
+}
+.theme-toggle:hover,.theme-toggle:focus-visible{
+  background:rgba(var(--u-event-rgb),.12)!important;
+  border-color:rgba(var(--u-event-rgb),.42)!important;
+}
+html[data-theme="light"] .theme-toggle{ background:rgba(20,35,50,.035)!important; }
+
+.events-home-link{
+  min-height:38px!important;
+  padding:8px 13px!important;
+  border-radius:12px!important;
+  border:1px solid var(--u-line-strong)!important;
+  background:rgba(255,255,255,.045)!important;
+  color:var(--u-text)!important;
+  font-size:13px!important;
+  letter-spacing:.01em;
+}
+.events-home-link:hover,.events-home-link:focus-visible{
+  background:rgba(var(--u-event-rgb),.11)!important;
+  border-color:rgba(var(--u-event-rgb),.36)!important;
+}
+html[data-theme="light"] .events-home-link{ background:rgba(20,35,50,.035)!important; color:var(--u-text)!important; }
+
+/* ---------- Landing page ---------- */
+.guild-page{ min-height:100dvh;display:flex;flex-direction:column; }
+.guild-page .events-hero{
+  position:relative;
+  border:0;
+  background:transparent;
+  overflow:visible;
+}
+.guild-page .events-hero::after{ display:none; }
+.guild-page .events-hero-inner{
+  position:relative;
+  max-width:var(--u-max);
+  min-height:0;
+  padding:clamp(26px,5vw,56px) clamp(18px,4vw,30px) 18px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+  gap:24px;
+}
+.guild-page .home-eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin:0 0 12px;
+  color:var(--u-guild);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.guild-page .home-eyebrow::before{
+  content:"";
+  width:7px;height:7px;border-radius:50%;background:currentColor;
+  box-shadow:0 0 0 5px rgba(217,173,85,.11);
+}
+.guild-page .events-hero h1{
+  margin:0;
+  max-width:780px;
+  color:var(--u-text);
+  font-size:clamp(34px,6vw,62px);
+  line-height:1.01;
+  font-weight:800;
+  letter-spacing:-.045em;
+}
+.guild-page .events-hero p{
+  max-width:710px;
+  margin:14px 0 0;
+  color:var(--u-muted);
+  font-size:clamp(15px,1.8vw,18px);
+  line-height:1.55;
+}
+.guild-page .guild-mark{
+  width:clamp(86px,11vw,126px);
+  aspect-ratio:1;
+  display:grid;
+  place-items:center;
+  border-radius:24px;
+  background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.025));
+  border:1px solid var(--u-line);
+  box-shadow:var(--u-shadow-soft);
+}
+.guild-page .guild-mark img{ width:74%;height:74%;object-fit:contain;display:block; }
+html[data-theme="light"] .guild-page .guild-mark{ background:#fff; }
+.guild-page .guild-hero-theme-toggle{ top:18px; }
+
+.guild-page .events-section{
+  width:100%;
+  max-width:var(--u-max);
+  margin:0 auto;
+  padding:14px clamp(18px,4vw,30px) 30px;
+}
+.guild-page .event-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+}
+.guild-page .event-card{
+  --event-accent:79,195,210;
+  position:relative;
+  overflow:hidden;
+  min-height:238px;
+  display:flex;
+  flex-direction:column;
+  color:var(--u-text);
+  text-decoration:none;
+  padding:20px;
+  border-radius:var(--u-radius);
+  border:1px solid var(--u-line);
+  background:
+    linear-gradient(180deg,rgba(var(--event-accent),.08),transparent 42%),
+    linear-gradient(180deg,var(--u-surface-2),var(--u-surface));
+  box-shadow:var(--u-shadow-soft);
+  transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease;
+}
+.guild-page .event-card::before{
+  content:"";
+  position:absolute;
+  inset:0 0 auto 0;
+  height:3px;
+  background:rgb(var(--event-accent));
+  opacity:.88;
+}
+.guild-page a.event-card:hover,
+.guild-page a.event-card:focus-visible{
+  transform:translateY(-3px);
+  border-color:rgba(var(--event-accent),.42);
+  box-shadow:var(--u-shadow);
+  outline:none;
+}
+.guild-page .event-card.mbc{ --event-accent:79,195,210; }
+.guild-page .event-card.apn{ --event-accent:242,162,74; }
+.guild-page .event-card.abr{ --event-accent:217,104,44; }
+.guild-page .event-card.guild-site{ --event-accent:217,173,85; }
+.guild-page .event-code{
+  width:46px;height:46px;border-radius:13px;
+  display:grid;place-items:center;
+  margin-bottom:24px;
+  background:rgba(var(--event-accent),.1);
+  border:1px solid rgba(var(--event-accent),.28);
+  color:rgb(var(--event-accent));
+  font-size:12px;
+  font-weight:800;
+}
+.guild-page .event-kind{
+  position:absolute;
+  top:20px;right:20px;
+  color:var(--u-muted);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.guild-page .event-card h2{
+  margin:0;
+  color:var(--u-text);
+  font-size:clamp(20px,2.1vw,25px);
+  font-weight:800;
+  letter-spacing:-.025em;
+}
+.guild-page .event-card p{ margin:9px 0 0;color:var(--u-muted);font-size:14px;line-height:1.5; }
+.guild-page .event-action{ margin-top:auto;padding-top:16px;display:flex;align-items:center;justify-content:space-between;gap:10px;color:rgb(var(--event-accent));font-size:13px;font-weight:800; }
+.guild-page .event-arrow{ font-size:18px;transition:transform .15s ease; }
+.guild-page a.event-card:hover .event-arrow{ transform:translateX(3px); }
+.guild-page .event-card.guild-site{
+  grid-column:1/-1;
+  min-height:0;
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr) auto;
+  grid-template-rows:auto auto;
+  column-gap:14px;
+  align-items:center;
+}
+.guild-page .event-card.guild-site .event-code{ grid-row:1/3;margin:0; }
+.guild-page .event-card.guild-site h2{ grid-column:2;margin:0; }
+.guild-page .event-card.guild-site p{ grid-column:2;margin:4px 0 0; }
+.guild-page .event-card.guild-site .event-action{ grid-column:3;grid-row:1/3;margin:0;padding:0; }
+.guild-page .event-card.guild-site .event-kind{ display:none; }
+.guild-page .landing-footer{ margin-top:auto;color:var(--u-muted);padding:12px 16px 22px;text-align:center;font-size:13px; }
+.guild-page .landing-footer a{ border:0;text-decoration:none; }
+.guild-page .landing-footer a:hover{ color:var(--u-text); }
+
+/* ---------- Shared APN / ABR shell ---------- */
+.festival-page .appbar{
+  min-height:62px;
+  background:rgba(12,16,23,.82);
+  border-bottom:1px solid var(--u-line);
+  box-shadow:0 8px 26px rgba(0,0,0,.12);
+  backdrop-filter:saturate(150%) blur(16px);
+  -webkit-backdrop-filter:saturate(150%) blur(16px);
+}
+.festival-page .appbar::after{
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:-1px;height:2px;
+  background:linear-gradient(90deg,transparent 0%,rgba(var(--u-event-rgb),.85) 25%,rgba(var(--u-event-rgb),.85) 75%,transparent 100%);
+  opacity:.48;
+}
+html[data-theme="light"] .festival-page .appbar{ background:rgba(255,255,255,.9); }
+.festival-page .appbar-inner{ max-width:var(--u-max);min-height:62px; }
+.festival-page .logo-dot{
+  width:34px;height:34px;
+  border-radius:10px;
+  transition:transform .15s ease,background .15s ease;
+}
+.festival-page .logo-dot:hover,.festival-page .logo-dot:focus-visible{
+  transform:scale(1.04);
+  background-color:rgba(var(--u-event-rgb),.08);
+  outline:none;
+}
+.festival-page .title{
+  color:var(--u-text);
+  font-size:19px;
+  font-weight:800;
+  letter-spacing:-.015em;
+}
+.festival-page .subtitle{
+  color:var(--u-muted);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+}
+.festival-page .topnav{ gap:5px; }
+.festival-page .topnav a{
+  color:var(--u-muted);
+  padding:8px 10px;
+  border-radius:11px;
+  font-size:13px;
+  font-weight:700;
+}
+.festival-page .topnav a:hover{ color:var(--u-text);background:rgba(var(--u-event-rgb),.08);border-color:rgba(var(--u-event-rgb),.18); }
+.festival-page .topnav a.active{
+  color:var(--u-text);
+  background:rgba(var(--u-event-rgb),.14);
+  border-color:rgba(var(--u-event-rgb),.36);
+  box-shadow:none;
+}
+.festival-page .nav-toggle{
+  width:38px;height:38px;
+  border-radius:12px;
+  border:1px solid var(--u-line-strong);
+}
+
+.festival-page .page{ max-width:var(--u-max);padding:18px clamp(14px,3vw,24px) 52px; }
+.festival-page .card{
+  border-radius:var(--u-radius);
+  border:1px solid var(--u-line);
+  background:linear-gradient(180deg,var(--u-surface-2),var(--u-surface));
+  box-shadow:var(--u-shadow-soft);
+}
+.festival-page .card.intro{ border-left:3px solid rgba(var(--u-event-rgb),.72); }
+.festival-page .lead{ color:var(--u-text);font-weight:800;letter-spacing:-.02em; }
+.festival-page .muted{ color:var(--u-muted); }
+
+.festival-page .hero-bleed{
+  min-height:clamp(360px,56vh,560px);
+  border-bottom:1px solid var(--u-line);
+  box-shadow:inset 0 -120px 180px rgba(0,0,0,.34);
+  align-items:flex-end;
+}
+.festival-page .hero-bleed::after{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(5,8,12,.06) 0%,rgba(5,8,12,.16) 45%,rgba(5,8,12,.64) 100%);
+  pointer-events:none;
+}
+.festival-page .hero-inner{ position:relative;z-index:1;max-width:var(--u-max);padding:0 clamp(14px,3vw,24px) 24px; }
+.festival-page .hero-card.glass{
+  width:min(720px,100%);
+  margin:0;
+  padding:22px;
+  border-radius:var(--u-radius);
+  background:rgba(13,17,24,.72)!important;
+  border:1px solid rgba(255,255,255,.17)!important;
+  box-shadow:0 18px 52px rgba(0,0,0,.34)!important;
+  backdrop-filter:blur(16px) saturate(135%)!important;
+  -webkit-backdrop-filter:blur(16px) saturate(135%)!important;
+}
+.festival-page .hero-card h1{ color:#fff;font-weight:800;letter-spacing:-.035em!important; }
+.festival-page .hero-card .muted{ color:rgba(244,247,250,.88)!important; }
+.festival-page .hero-card .badges{ gap:7px; }
+.festival-page .hero-card .cta,
+.festival-page .cta,
+.festival-page .btn:not(.danger){
+  border-radius:12px;
+  border:1px solid rgba(var(--u-event-rgb),.45);
+  background:rgba(var(--u-event-rgb),.16);
+  color:var(--u-text);
+  box-shadow:none;
+}
+.festival-page .hero-card .cta{ color:#fff; }
+.festival-page .hero-card .cta:hover,
+.festival-page .cta:hover,
+.festival-page .btn:not(.danger):hover{
+  background:rgba(var(--u-event-rgb),.25);
+  border-color:rgba(var(--u-event-rgb),.62);
+  text-decoration:none;
+}
+
+.festival-page .controls{
+  border-radius:var(--u-radius-sm);
+  border:1px solid var(--u-line);
+  background:var(--u-surface);
+  box-shadow:var(--u-shadow-soft);
+}
+.festival-page input,
+.festival-page select,
+.festival-page textarea,
+.festival-page .select{
+  color:var(--u-text);
+  background:var(--u-surface-2);
+  border-color:var(--u-line-strong);
+  border-radius:11px;
+}
+.festival-page .chip{
+  background:rgba(var(--u-event-rgb),.08);
+  border-color:rgba(var(--u-event-rgb),.22);
+  color:var(--u-text);
+}
+.festival-page .table-section,
+.festival-page .table-wrapper{
+  border-radius:var(--u-radius);
+}
+.festival-page table{ background:var(--u-surface); }
+.festival-page thead th{
+  background:var(--u-surface-3);
+  color:var(--u-text);
+  border-color:var(--u-line);
+}
+.festival-page tbody td{ border-color:var(--u-line); }
+.festival-page tbody tr:hover{ background:rgba(var(--u-event-rgb),.055); }
+.festival-page tbody tr.is-selected{ background:rgba(var(--u-event-rgb),.11); }
+.festival-page .viewer{
+  border-radius:var(--u-radius);
+  border:1px solid var(--u-line);
+  background:var(--u-surface);
+  box-shadow:var(--u-shadow-soft);
+}
+.festival-page .stage{ background:var(--u-surface-2); }
+.festival-page .pager{ color:var(--u-muted); }
+.festival-page .carousel-arrow{
+  border-radius:12px;
+  background:rgba(10,13,18,.72);
+  border:1px solid rgba(255,255,255,.16);
+}
+.festival-page .footer{ color:var(--u-muted);border-color:var(--u-line); }
+
+/* ---------- MBC: same shell, conference-specific accent ---------- */
+.mbc-page{ --bg:var(--u-bg);--surface:var(--u-surface);--ink:var(--u-text);--muted:var(--u-muted);--line:var(--u-line);--primary:var(--u-event);--link:var(--u-event);--radius:var(--u-radius);--shadow:var(--u-shadow-soft); }
+.mbc-page #app{ max-width:var(--u-max);padding:12px 16px 72px; }
+.mbc-page .topbar{
+  position:sticky;
+  top:8px;
+  z-index:70;
+  align-items:center;
+  margin:0 0 16px;
+  padding:10px 12px;
+  border:1px solid var(--u-line);
+  border-radius:18px;
+  background:rgba(12,16,23,.88);
+  box-shadow:var(--u-shadow-soft);
+  backdrop-filter:blur(16px) saturate(150%);
+  -webkit-backdrop-filter:blur(16px) saturate(150%);
+}
+html[data-theme="light"] .mbc-page .topbar{ background:rgba(255,255,255,.92); }
+.mbc-page .brand-row{ align-items:center;gap:10px; }
+.mbc-page .brand-mark{ width:36px;height:36px;flex-basis:36px; }
+.mbc-page .topbar-copy{ gap:0; }
+.mbc-page .eyebrow{ display:none; }
+.mbc-page .topbar h1{
+  margin:0;
+  color:var(--u-text);
+  font-family:var(--u-font);
+  font-size:19px;
+  font-weight:800;
+  line-height:1.15;
+  letter-spacing:-.015em;
+  text-transform:none;
+}
+.mbc-page .topbar .subhead{
+  display:block;
+  margin:2px 0 0;
+  color:var(--u-muted);
+  font-size:11px;
+  line-height:1.2;
+  font-weight:700;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+}
+.mbc-page .topbar-actions{ gap:7px!important;flex-wrap:nowrap!important;width:auto!important;justify-content:flex-end!important; }
+.mbc-page .secondary-btn{
+  min-height:38px;
+  padding:8px 13px;
+  border-radius:12px;
+  border:1px solid var(--u-line-strong);
+  background:rgba(255,255,255,.045);
+  color:var(--u-text);
+}
+.mbc-page .layout{ gap:14px; }
+.mbc-page .card,
+.mbc-page .session-card,
+.mbc-page .presenter-card,
+.mbc-page .exhibitor-card,
+.mbc-page .raffle-card,
+.mbc-page .map-card{
+  color:var(--u-text);
+  border:1px solid var(--u-line);
+  border-radius:var(--u-radius);
+  background:linear-gradient(180deg,var(--u-surface-2),var(--u-surface));
+  box-shadow:var(--u-shadow-soft);
+}
+.mbc-page h1,.mbc-page h2,.mbc-page h3,.mbc-page h4{ font-family:var(--u-font); }
+.mbc-page .tabs{
+  position:sticky;
+  top:76px;
+  z-index:55;
+  gap:5px;
+  padding:7px;
+  border-radius:16px;
+  background:rgba(18,23,32,.9);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  overflow-x:auto;
+  flex-wrap:nowrap;
+  scrollbar-width:none;
+}
+.mbc-page .tabs::-webkit-scrollbar{ display:none; }
+html[data-theme="light"] .mbc-page .tabs{ background:rgba(255,255,255,.92); }
+.mbc-page .tab{
+  flex:0 0 auto;
+  padding:10px 12px;
+  border-radius:11px;
+  color:var(--u-muted);
+  white-space:nowrap;
+}
+.mbc-page .tab:hover,.mbc-page .tab:focus-visible{ background:rgba(var(--u-event-rgb),.08);color:var(--u-text); }
+.mbc-page .tab.active{ background:rgba(var(--u-event-rgb),.18)!important;color:var(--u-text)!important;box-shadow:inset 0 0 0 1px rgba(var(--u-event-rgb),.34); }
+.mbc-page .hero{
+  grid-template-columns:1.5fr .8fr;
+  border-top:3px solid rgba(var(--u-event-rgb),.7);
+  background:
+    radial-gradient(480px 200px at 0% 0%,rgba(var(--u-event-rgb),.15),transparent 70%),
+    linear-gradient(180deg,var(--u-surface-2),var(--u-surface));
+}
+.mbc-page .hero-date{
+  color:var(--u-text);
+  background:rgba(var(--u-event-rgb),.13);
+  border-color:rgba(var(--u-event-rgb),.28);
+}
+.mbc-page .hero h2{ color:var(--u-text);font-size:clamp(1.5rem,2.7vw,2.25rem);letter-spacing:-.03em; }
+.mbc-page .hero p{ color:var(--u-muted); }
+.mbc-page .hero-stats div{ background:var(--u-surface-2);border-color:var(--u-line);border-radius:15px; }
+.mbc-page .hero-stats strong{ color:var(--u-event); }
+.mbc-page .hero-stats span{ color:var(--u-muted); }
+.mbc-page .presented-by{
+  margin:14px 0 0!important;
+  display:inline-flex!important;
+  align-items:center;
+  width:max-content;
+  max-width:100%;
+  border:1px solid var(--u-line)!important;
+  border-radius:12px!important;
+  padding:6px 9px!important;
+  background:#fff!important;
+}
+.mbc-page .presented-label{ color:#4e5b63!important; }
+.mbc-page .controls{ border-radius:var(--u-radius); }
+.mbc-page .search-wrap input,.mbc-page .filter-wrap select{
+  color:var(--u-text)!important;
+  background:var(--u-surface-2)!important;
+  border-color:var(--u-line-strong)!important;
+}
+.mbc-page .day-chip{
+  background:var(--u-surface);
+  color:var(--u-text);
+  border-color:var(--u-line-strong);
+  border-radius:12px;
+}
+.mbc-page .day-chip.active{ background:rgba(var(--u-event-rgb),.18)!important;box-shadow:inset 0 0 0 1px rgba(var(--u-event-rgb),.28);color:var(--u-text)!important; }
+.mbc-page .chip,.mbc-page .type-badge{ background:rgba(var(--u-event-rgb),.08)!important;border-color:rgba(var(--u-event-rgb),.18)!important;color:var(--u-text)!important; }
+.mbc-page .dialog-card{ background:var(--u-surface);color:var(--u-text);border:1px solid var(--u-line); }
+
+/* ---------- Privacy ---------- */
+.privacy-page header{
+  background:
+    radial-gradient(500px 240px at 90% 0%,rgba(217,173,85,.18),transparent 75%),
+    linear-gradient(180deg,var(--u-surface-2),var(--u-surface));
+  color:var(--u-text);
+  border-bottom:1px solid var(--u-line);
+}
+.privacy-page body{} /* keeps specificity tools happy */
+.privacy-page .header-inner,.privacy-page main,.privacy-page footer{ width:min(100% - 2rem,980px); }
+.privacy-page h1{ font-family:var(--u-font);font-weight:800;letter-spacing:-.04em; }
+.privacy-page main{
+  background:var(--u-surface);
+  color:var(--u-text);
+  border-color:var(--u-line);
+  border-radius:var(--u-radius);
+  box-shadow:var(--u-shadow-soft);
+}
+.privacy-page nav,.privacy-page address{ background:var(--u-surface-2)!important;border-color:var(--u-line)!important; }
+.privacy-page h2,.privacy-page nav a,.privacy-page a{ color:var(--u-event); }
+
+/* ---------- Mobile ---------- */
+@media(max-width:900px){
+  .guild-page .events-hero-inner{ grid-template-columns:1fr; padding:24px 58px 14px 16px; }
+  .guild-page .guild-mark{ position:absolute;right:14px;bottom:14px;width:44px;border-radius:13px; }
+  .guild-page .events-section{ padding:10px 12px 26px; }
+  .guild-page .event-grid{ grid-template-columns:1fr;gap:9px; }
+  .guild-page .event-card{
+    min-height:0;
+    padding:13px 14px;
+    display:grid;
+    grid-template-columns:42px minmax(0,1fr) auto;
+    grid-template-rows:auto auto;
+    column-gap:12px;
+    row-gap:2px;
+    align-items:center;
+    border-radius:16px;
+  }
+  .guild-page .event-card::before{ width:3px;height:auto;inset:0 auto 0 0; }
+  .guild-page .event-code{ grid-column:1;grid-row:1/3;margin:0;width:42px;height:42px;border-radius:11px; }
+  .guild-page .event-kind{ display:none; }
+  .guild-page .event-card h2{ grid-column:2/4;font-size:17px;margin:0; }
+  .guild-page .event-card p{ display:none; }
+  .guild-page .event-action{ grid-column:2/4;margin:0;padding:3px 0 0;font-size:12px;justify-content:flex-start; }
+  .guild-page .event-card.guild-site{ grid-column:auto;grid-template-columns:42px minmax(0,1fr) auto; }
+  .guild-page .event-card.guild-site .event-code{ grid-column:1; }
+  .guild-page .event-card.guild-site h2{ grid-column:2/4; }
+  .guild-page .event-card.guild-site p{ display:none; }
+  .guild-page .event-card.guild-site .event-action{ grid-column:2/4;grid-row:2; }
+
+  .festival-page .appbar-inner{ min-height:58px; }
+  .festival-page .hero-bleed{ min-height:430px; }
+  .festival-page .hero-inner{ padding-bottom:14px; }
+  .festival-page .hero-card.glass{ padding:17px;border-radius:17px; }
+  .festival-page .hero-card .cta{ padding:9px 11px;font-size:13px; }
+  .festival-page .topnav{
+    top:58px!important;
+    right:10px!important;
+    min-width:min(290px,calc(100vw - 20px));
+    padding:8px;
+    border:1px solid var(--u-line);
+    border-radius:15px;
+    background:rgba(18,23,32,.97);
+    box-shadow:var(--u-shadow);
+  }
+  html[data-theme="light"] .festival-page .topnav{ background:rgba(255,255,255,.98); }
+  .festival-page .topnav a{ width:100%;box-sizing:border-box;padding:10px 11px; }
+
+  .mbc-page #app{ padding:8px 10px 70px; }
+  .mbc-page .topbar{ top:6px;padding:8px 9px;border-radius:16px;gap:8px;flex-direction:row!important; }
+  .mbc-page .brand-mark{ width:32px;height:32px;flex-basis:32px; }
+  .mbc-page .topbar h1{ font-size:16px; }
+  .mbc-page .topbar .subhead{ font-size:10px; }
+  .mbc-page .topbar-actions{ margin-left:auto; }
+  .mbc-page .topbar-actions .events-home-link{ display:none!important; }
+  .mbc-page #installBtn{ display:none!important; }
+  .mbc-page .tabs{ top:66px; }
+  .mbc-page .hero{ grid-template-columns:1fr; }
+  .mbc-page .hero-stats{ grid-template-columns:repeat(3,1fr); }
+}
+
+@media(max-width:520px){
+  .guild-page .events-hero h1{ font-size:34px; }
+  .guild-page .events-hero p{ font-size:14px; }
+  .guild-page .guild-hero-theme-toggle{ top:10px;right:10px; }
+  .festival-page .title{ font-size:15px; }
+  .festival-page .subtitle{ font-size:9px; }
+  .festival-page .festival-header-controls{ gap:5px; }
+  .festival-page .theme-toggle,.festival-page .nav-toggle{ width:34px!important;height:34px!important;min-width:34px!important; }
+  .festival-page .hero-bleed{ min-height:400px; }
+  .festival-page .hero-card.glass{ width:100%; }
+  .festival-page .hero-card .badges{ display:grid;grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .festival-page .hero-card .cta{ text-align:center; }
+  .mbc-page .theme-toggle{ width:34px!important;height:34px!important;min-width:34px!important; }
+}
+
+@media print{
+  .festival-page .appbar,.mbc-page .topbar,.mbc-page .tabs,.theme-toggle{ display:none!important; }
+}
+
+/* Final specificity harmonizers for the preview layer. */
+html[data-theme="light"] body.guild-page .events-hero{
+  background:transparent!important;
+  border:0!important;
+}
+html[data-theme="light"] body.guild-page .events-hero::after{ display:none!important; }
+html[data-theme="dark"] body.mbc-page{
+  --bg:var(--u-bg);
+  --surface:var(--u-surface);
+  --ink:var(--u-text);
+  --muted:var(--u-muted);
+  --line:var(--u-line);
+  --primary:var(--u-event);
+  --link:var(--u-event);
+  --shadow:var(--u-shadow-soft);
+  background:
+    radial-gradient(900px 600px at 8% -15%,rgba(var(--u-event-rgb),.09),transparent 68%),
+    linear-gradient(180deg,var(--u-bg-2),var(--u-bg));
+}
+html[data-theme="dark"] .mbc-page .hero{
+  background:
+    radial-gradient(480px 200px at 0% 0%,rgba(var(--u-event-rgb),.15),transparent 70%),
+    linear-gradient(180deg,var(--u-surface-2),var(--u-surface));
+}
+html[data-theme="dark"] .mbc-page .tabs{
+  background:rgba(18,23,32,.9);
+  border-color:var(--u-line);
+  box-shadow:var(--u-shadow-soft);
+}

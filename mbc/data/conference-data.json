@@ -1,0 +1,2179 @@
+{
+  "conference": {
+    "name": "MN Brewers Conference",
+    "year": 2026,
+    "dates": "April 9\u201310, 2026",
+    "host": "Minnesota Craft Brewers Guild",
+    "tagline": "Conference companion",
+    "theme": {
+      "primary": "#003B4A",
+      "accent": "#F2C969",
+      "secondary": "#674530",
+      "link": "#36A0B2",
+      "success": "#4E7F4E"
+    }
+  },
+  "sessions": [
+    {
+      "id": "2026-04-10-keynote-01",
+      "title": "Keynote: Craft Beer vs. The World",
+      "type": "keynote",
+      "date": "2026-04-10",
+      "startTime": "9:00 AM",
+      "endTime": "10:00 AM",
+      "block": "Keynote",
+      "track": "",
+      "trackMeta": {},
+      "location": "Minnesota Valley Ballroom",
+      "locationMeta": {
+        "location_id": "location-minnesota-valley-ballroom",
+        "name": "Minnesota Valley Ballroom",
+        "location_type": "ballroom",
+        "level": "",
+        "notes": ""
+      },
+      "description": "Over a decade and a half on the beverage alcohol beat, Dave Infante has reported on how craft beer went from a \"movement,\" to a \"boom,\" to the rapidly maturing industry it is today. In his keynote presentation, he'll examine some of the biggest challenges facing today's craft brewer, dispel some popular mainstream-media myths, and highlight how the full-flavored beer segment still has opportunities to deliver on its promises of quality, innovation, and community. With incisive analysis, good data, and bad memes, Dave will examine the state of the industry from his unique vantage point, offering fresh ideas and perspective to Minnesota's craft brewers finding their way through the industry's so-called \"second shakeout.\"",
+      "speakers": [
+        "Dave Infante"
+      ],
+      "speakerIds": [
+        "presenter-dave-infante"
+      ],
+      "moderators": [],
+      "isPublic": true,
+      "sortOrder": 1,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-affinity-group-03",
+      "title": "Amarillo Allies",
+      "type": "affinity_group",
+      "date": "2026-04-10",
+      "startTime": "10:15 AM",
+      "endTime": "10:50 AM",
+      "block": "Affinity Group",
+      "track": "",
+      "trackMeta": {},
+      "location": "Wood Duck Pond",
+      "locationMeta": {
+        "location_id": "location-wood-duck-pond",
+        "name": "Wood Duck Pond",
+        "location_type": "room",
+        "level": "",
+        "notes": ""
+      },
+      "description": "Affinity Groups are designed to connect industry peers for shared experiences and discussions. These groups meet during designated sessions to foster networking based on common roles, identities, or interests within the industry.",
+      "speakers": [],
+      "speakerIds": [],
+      "moderators": [
+        "Jeff"
+      ],
+      "isPublic": true,
+      "sortOrder": 2,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-affinity-group-04",
+      "title": "Brewdog Brewpubs",
+      "type": "affinity_group",
+      "date": "2026-04-10",
+      "startTime": "10:15 AM",
+      "endTime": "10:50 AM",
+      "block": "Affinity Group",
+      "track": "",
+      "trackMeta": {},
+      "location": "Minnesota Valley Ballroom",
+      "locationMeta": {
+        "location_id": "location-eagles-nest",
+        "name": "Minnesota Valley Ballroom",
+        "location_type": "room",
+        "level": "",
+        "notes": ""
+      },
+      "description": "Affinity Groups are designed to connect industry peers for shared experiences and discussions. These groups meet during designated sessions to foster networking based on common roles, identities, or interests within the industry.",
+      "speakers": [],
+      "speakerIds": [],
+      "moderators": [
+        "Riley"
+      ],
+      "isPublic": true,
+      "sortOrder": 3,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-affinity-group-05",
+      "title": "Centennial Sippers",
+      "type": "affinity_group",
+      "date": "2026-04-10",
+      "startTime": "10:15 AM",
+      "endTime": "10:50 AM",
+      "block": "Affinity Group",
+      "track": "",
+      "trackMeta": {},
+      "location": "Hawks Ridge",
+      "locationMeta": {
+        "location_id": "location-hawks-ridge",
+        "name": "Hawks Ridge",
+        "location_type": "room",
+        "level": "",
+        "notes": ""
+      },
+      "description": "Affinity Groups are designed to connect industry peers for shared experiences and discussions. These groups meet during designated sessions to foster networking based on common roles, identities, or interests within the industry.",
+      "speakers": [],
+      "speakerIds": [],
+      "moderators": [
+        "Kabel"
+      ],
+      "isPublic": true,
+      "sortOrder": 4,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-affinity-group-06",
+      "title": "Chinook & Company",
+      "type": "affinity_group",
+      "date": "2026-04-10",
+      "startTime": "10:15 AM",
+      "endTime": "10:50 AM",
+      "block": "Affinity Group",
+      "track": "",
+      "trackMeta": {},
+      "location": "Mallard Point",
+      "locationMeta": {
+        "location_id": "location-mallard-point",
+        "name": "Mallard Point",
+        "location_type": "room",
+        "level": "",
+        "notes": ""
+      },
+      "description": "Affinity Groups are designed to connect industry peers for shared experiences and discussions. These groups meet during designated sessions to foster networking based on common roles, identities, or interests within the industry.",
+      "speakers": [],
+      "speakerIds": [],
+      "moderators": [
+        "Morgan"
+      ],
+      "isPublic": true,
+      "sortOrder": 5,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-affinity-group-07",
+      "title": "Citra Crew",
+      "type": "affinity_group",
+      "date": "2026-04-10",
+      "startTime": "10:15 AM",
+      "endTime": "10:50 AM",
+      "block": "Affinity Group",
+      "track": "",
+      "trackMeta": {},
+      "location": "Riverside",
+      "locationMeta": {
+        "location_id": "location-riverside",
+        "name": "Riverside",
+        "location_type": "room",
+        "level": "",
+        "notes": ""
+      },
+      "description": "Affinity Groups are designed to connect industry peers for shared experiences and discussions. These groups meet during designated sessions to foster networking based on common roles, identities, or interests within the industry.",
+      "speakers": [],
+      "speakerIds": [],
+      "moderators": [
+        "Nate"
+      ],
+      "isPublic": true,
+      "sortOrder": 6,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-affinity-group-08",
+      "title": "Galaxy Gang",
+      "type": "affinity_group",
+      "date": "2026-04-10",
+      "startTime": "10:15 AM",
+      "endTime": "10:50 AM",
+      "block": "Affinity Group",
+      "track": "",
+      "trackMeta": {},
+      "location": "Owl Overlook",
+      "locationMeta": {
+        "location_id": "location-owl-overlook",
+        "name": "Owl Overlook",
+        "location_type": "room",
+        "level": "",
+        "notes": ""
+      },
+      "description": "Affinity Groups are designed to connect industry peers for shared experiences and discussions. These groups meet during designated sessions to foster networking based on common roles, identities, or interests within the industry.",
+      "speakers": [],
+      "speakerIds": [],
+      "moderators": [
+        "Derek"
+      ],
+      "isPublic": true,
+      "sortOrder": 7,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-affinity-group-09",
+      "title": "Magnum Members",
+      "type": "affinity_group",
+      "date": "2026-04-10",
+      "startTime": "10:15 AM",
+      "endTime": "10:50 AM",
+      "block": "Affinity Group",
+      "track": "",
+      "trackMeta": {},
+      "location": "White Pelican Bay",
+      "locationMeta": {
+        "location_id": "location-white-pelican-bay",
+        "name": "White Pelican Bay",
+        "location_type": "room",
+        "level": "",
+        "notes": ""
+      },
+      "description": "Affinity Groups are designed to connect industry peers for shared experiences and discussions. These groups meet during designated sessions to foster networking based on common roles, identities, or interests within the industry.",
+      "speakers": [],
+      "speakerIds": [],
+      "moderators": [
+        "Jeremy"
+      ],
+      "isPublic": true,
+      "sortOrder": 8,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-affinity-group-10",
+      "title": "Mosaic Meeting Mob",
+      "type": "affinity_group",
+      "date": "2026-04-10",
+      "startTime": "10:15 AM",
+      "endTime": "10:50 AM",
+      "block": "Affinity Group",
+      "track": "",
+      "trackMeta": {},
+      "location": "Cardinals Perch",
+      "locationMeta": {
+        "location_id": "location-cardinals-perch",
+        "name": "Cardinals Perch",
+        "location_type": "room",
+        "level": "",
+        "notes": ""
+      },
+      "description": "Affinity Groups are designed to connect industry peers for shared experiences and discussions. These groups meet during designated sessions to foster networking based on common roles, identities, or interests within the industry.",
+      "speakers": [],
+      "speakerIds": [],
+      "moderators": [
+        "Jordan"
+      ],
+      "isPublic": true,
+      "sortOrder": 9,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-affinity-group-11",
+      "title": "Saaz Squad",
+      "type": "affinity_group",
+      "date": "2026-04-10",
+      "startTime": "10:15 AM",
+      "endTime": "10:50 AM",
+      "block": "Affinity Group",
+      "track": "",
+      "trackMeta": {},
+      "location": "Woodlands",
+      "locationMeta": {
+        "location_id": "location-woodlands",
+        "name": "Woodlands",
+        "location_type": "room",
+        "level": "",
+        "notes": ""
+      },
+      "description": "Affinity Groups are designed to connect industry peers for shared experiences and discussions. These groups meet during designated sessions to foster networking based on common roles, identities, or interests within the industry.",
+      "speakers": [],
+      "speakerIds": [],
+      "moderators": [
+        "Ben"
+      ],
+      "isPublic": true,
+      "sortOrder": 10,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-ed-session-1-12",
+      "title": "Brewing Bonds: Cultivating Community Partnerships to Increase Foot Traffic",
+      "type": "session",
+      "date": "2026-04-10",
+      "startTime": "11:00 AM",
+      "endTime": "11:50 AM",
+      "block": "Ed Session 1",
+      "track": "Marketing & Events",
+      "trackMeta": {
+        "track_id": "track-marketing-and-events",
+        "name": "Marketing & Events",
+        "icon": "megaphone",
+        "color": "#36A0B2"
+      },
+      "location": "White Pelican Bay",
+      "locationMeta": {
+        "location_id": "location-white-pelican-bay",
+        "name": "White Pelican Bay",
+        "location_type": "room",
+        "level": "",
+        "notes": ""
+      },
+      "description": "As the craft beer industry continues to evolve, breweries are recognizing the significance of partnerships within their communities. This presentation will explore how engaging with local organizations can create impactful experiences that foster inclusivity and strengthen community ties while offering enjoyable options for visitors of many ages. Selected by the MNCBG DEI Committee.",
+      "speakers": [
+        "Audrey Robinson",
+        "Dawn Finnie",
+        "Julie O'Donnell",
+        "Liz Heimer"
+      ],
+      "speakerIds": [
+        "presenter-audrey-robinson",
+        "presenter-dawn-finnie",
+        "presenter-julie-o-donnell",
+        "presenter-liz-heimer"
+      ],
+      "moderators": [
+        "Jeremy"
+      ],
+      "isPublic": true,
+      "sortOrder": 11,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-ed-session-1-13",
+      "title": "Hop Quality Analysis for Dummies",
+      "type": "session",
+      "date": "2026-04-10",
+      "startTime": "11:00 AM",
+      "endTime": "11:50 AM",
+      "block": "Ed Session 1",
+      "track": "Brewing Techniques & Innovation",
+      "trackMeta": {
+        "track_id": "track-brewing-techniques-and-innovation",
+        "name": "Brewing Techniques & Innovation",
+        "icon": "leaf",
+        "color": "#4E7F4E"
+      },
+      "location": "Wood Duck Pond",
+      "locationMeta": {
+        "location_id": "location-wood-duck-pond",
+        "name": "Wood Duck Pond",
+        "location_type": "room",
+        "level": "",
+        "notes": ""
+      },
+      "description": "Hops are one of your most important ingredients. Besides rubbing and sniffing, what can you do to analyze hop quality? In this presentation, we will cover physical hop pellet analysis, define Descriptive Hop Analysis, and introduce and define Comparative Aroma Analysis. You will leave with new skills to evaluate hops, tools that you can use to secure better quality hops, and most importantly a new mindset to better identify hops that meet your brewing goals. Selected by the MBAA.",
+      "speakers": [
+        "Eric Sannerud"
+      ],
+      "speakerIds": [
+        "presenter-eric-sannerud"
+      ],
+      "moderators": [
+        "Jeff"
+      ],
+      "isPublic": true,
+      "sortOrder": 12,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-ed-session-1-14",
+      "title": "Overdose Prevention Training (Narcan Training)",
+      "type": "session",
+      "date": "2026-04-10",
+      "startTime": "11:00 AM",
+      "endTime": "11:50 AM",
+      "block": "Ed Session 1",
+      "track": "Community & Culture",
+      "trackMeta": {
+        "track_id": "track-community-and-culture",
+        "name": "Community & Culture",
+        "icon": "users",
+        "color": "#7A5A43"
+      },
+      "location": "Cardinals Perch",
+      "locationMeta": {
+        "location_id": "location-cardinals-perch",
+        "name": "Cardinals Perch",
+        "location_type": "room",
+        "level": "",
+        "notes": ""
+      },
+      "description": "In this training participants will learn about the opioid epidemic and why this is something that is important for all of us to be aware of. The training will cover how to recognize an overdose, what naloxone/Narcan is and how it works, and how to administer it to save a life. Upon completion of this training, all attendees will be able to receive a free IM naloxone kit, certificate of completion, and continuing education credits for select licenses. Session will include free injectable naloxone kits and drug test strips to take back to the brewery. Narcan (nasal spray naloxone) kits can be purchased for an at-cost fee.Selected by the MNCBG DEI Committee.",
+      "speakers": [
+        "Meghan Walsh"
+      ],
+      "speakerIds": [
+        "presenter-meghan-walsh"
+      ],
+      "moderators": [
+        "Riley"
+      ],
+      "isPublic": true,
+      "sortOrder": 13,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-ed-session-1-15",
+      "title": "State of the Hemp Market",
+      "type": "session",
+      "date": "2026-04-10",
+      "startTime": "11:00 AM",
+      "endTime": "11:50 AM",
+      "block": "Ed Session 1",
+      "track": "Looking to the Future",
+      "trackMeta": {
+        "track_id": "track-looking-to-the-future",
+        "name": "Looking to the Future",
+        "icon": "lightbulb",
+        "color": "#F2C969"
+      },
+      "location": "Woodlands",
+      "locationMeta": {
+        "location_id": "location-woodlands",
+        "name": "Woodlands",
+        "location_type": "room",
+        "level": "",
+        "notes": ""
+      },
+      "description": "What is the latest information on the MN and federal hemp market, and how should businesses approach this market while it is in flux? A great session for businesses looking for more clarity on the market's current state and how to plan going forward.",
+      "speakers": [
+        "Jen Reise",
+        "Jon Halper",
+        "Steven Brown",
+        "Elliot Ginsburg"
+      ],
+      "speakerIds": [
+        "presenter-jen-reise",
+        "presenter-jon-halper",
+        "presenter-steven-brown",
+        "presenter-elliot-ginsburg"
+      ],
+      "moderators": [
+        "Bob"
+      ],
+      "isPublic": true,
+      "sortOrder": 14,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-ed-session-1-16",
+      "title": "Winning in Distribution",
+      "type": "session",
+      "date": "2026-04-10",
+      "startTime": "11:00 AM",
+      "endTime": "11:50 AM",
+      "block": "Ed Session 1",
+      "track": "Business & Operations",
+      "trackMeta": {
+        "track_id": "track-business-and-operations",
+        "name": "Business & Operations",
+        "icon": "handshake",
+        "color": "#674530"
+      },
+      "location": "Riverside",
+      "locationMeta": {
+        "location_id": "location-riverside",
+        "name": "Riverside",
+        "location_type": "room",
+        "level": "",
+        "notes": ""
+      },
+      "description": "Most breweries face challenges when it comes to succeeding in distribution. From understanding how the numbers impact the business as a whole to managing distributor relationships, running a sales team, and coordinating logistics, distribution is no easy feat. In this rigged game, wins can happen, though they often feel fleeting. Some breweries distribute out of necessity, while others seek the validation of seeing their beer on store shelves. Whatever your motivation, there are a few essential concepts you must embrace to find success in distribution. In this session, we\u2019ll share these key concepts along with benchmarks to help you unlock the path to distribution success. Selected by the MNCBG Board.",
+      "speakers": [
+        "Chris Farmand"
+      ],
+      "speakerIds": [
+        "presenter-chris-farmand"
+      ],
+      "moderators": [
+        "Nate"
+      ],
+      "isPublic": true,
+      "sortOrder": 15,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-ed-session-2-17",
+      "title": "Future Planning in Headwinds- Let's Get Creative",
+      "type": "session",
+      "date": "2026-04-10",
+      "startTime": "1:30 PM",
+      "endTime": "2:20 PM",
+      "block": "Ed Session 2",
+      "track": "Looking to the Future",
+      "trackMeta": {
+        "track_id": "track-looking-to-the-future",
+        "name": "Looking to the Future",
+        "icon": "lightbulb",
+        "color": "#F2C969"
+      },
+      "location": "Woodlands",
+      "locationMeta": {
+        "location_id": "location-woodlands",
+        "name": "Woodlands",
+        "location_type": "room",
+        "level": "",
+        "notes": ""
+      },
+      "description": "This panel discussion is all about embracing a positive and progressive mindset as we future plan for our businesses. Craft beer is facing headwinds, and the current regulatory structure in the state of Minnesota is quite restrictive, making mergers, acquisitions, or expansion through additional direct to retail impossible or impractical. So what do we do next?",
+      "speakers": [
+        "Ben Hugus",
+        "Mike Corneille",
+        "Ryan Bandy"
+      ],
+      "speakerIds": [
+        "presenter-ben-hugus",
+        "presenter-mike-corneille",
+        "presenter-ryan-bandy"
+      ],
+      "moderators": [
+        "Kabel"
+      ],
+      "isPublic": true,
+      "sortOrder": 16,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-ed-session-2-18",
+      "title": "Restaurant Hospitality for Breweries - Turning your Brewery into a Successful F&B Operation",
+      "type": "session",
+      "date": "2026-04-10",
+      "startTime": "1:30 PM",
+      "endTime": "2:20 PM",
+      "block": "Ed Session 2",
+      "track": "Business & Operations",
+      "trackMeta": {
+        "track_id": "track-business-and-operations",
+        "name": "Business & Operations",
+        "icon": "handshake",
+        "color": "#674530"
+      },
+      "location": "Wood Duck Pond",
+      "locationMeta": {
+        "location_id": "location-wood-duck-pond",
+        "name": "Wood Duck Pond",
+        "location_type": "room",
+        "level": "",
+        "notes": ""
+      },
+      "description": "Great beer gets people in the door. Thoughtful hospitality and a smart food concept keep them coming back. This session takes a practical, real-world look at how thoughtfully designed food and hospitality operations can elevate your brewery\u2019s guest experience and long-term profitability. Food and beverage experts Sara Phelps and Michaelann Gillis will share insights into how breweries can successfully introduce, manage, or refine a food offering that fits their brand, space, and operational reality\u2014without overcomplicating the taproom experience. We\u2019ll dive into the details that matter most: building confident service teams, creating consistent guest experiences and designing taproom \u201csteps of service\u201d that run smoothly. Whether you\u2019re looking to strengthen your current hospitality approach or considering adding a food and beverage component to your taproom, this conversation will help you see new opportunities to take your guest experience to the next level.",
+      "speakers": [
+        "Michaelann Gillis",
+        "Sara Phelps"
+      ],
+      "speakerIds": [
+        "presenter-michaelann-gillis",
+        "presenter-sara-phelps"
+      ],
+      "moderators": [
+        "Jeff"
+      ],
+      "isPublic": true,
+      "sortOrder": 17,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-ed-session-2-19",
+      "title": "Stave New World: Methodologies for Managing the Modern (British) Brewer's Wood Cellar",
+      "type": "session",
+      "date": "2026-04-10",
+      "startTime": "1:30 PM",
+      "endTime": "2:20 PM",
+      "block": "Ed Session 2",
+      "track": "Brewing Techniques & Innovation",
+      "trackMeta": {
+        "track_id": "track-brewing-techniques-and-innovation",
+        "name": "Brewing Techniques & Innovation",
+        "icon": "leaf",
+        "color": "#4E7F4E"
+      },
+      "location": "White Pelican Bay",
+      "locationMeta": {
+        "location_id": "location-white-pelican-bay",
+        "name": "White Pelican Bay",
+        "location_type": "room",
+        "level": "",
+        "notes": ""
+      },
+      "description": "Revolution Brewing Barrel Program Manager and Proprietor of Barrelponix, Marty Scott, pulls back the curtain on just what's happening to beer as it ages in (or on) wood. Through the concept of \"Trinity\", brewers and beverage makers will shed common misconceptions and learn methods for program optimization from both liquid and commercial perspectives. Learn how to infuse custom oak extractions into fresh beer anaerobically, or turn your existing barrel program up to eleven while maximizing the impact on your bottom line.",
+      "speakers": [
+        "Marty Scott"
+      ],
+      "speakerIds": [
+        "presenter-marty-scott"
+      ],
+      "moderators": [
+        "Morgan"
+      ],
+      "isPublic": true,
+      "sortOrder": 18,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-ed-session-2-20",
+      "title": "Telling Your Brand Story Online: How to Connect and Stand Out Online",
+      "type": "session",
+      "date": "2026-04-10",
+      "startTime": "1:30 PM",
+      "endTime": "2:20 PM",
+      "block": "Ed Session 2",
+      "track": "Marketing & Events",
+      "trackMeta": {
+        "track_id": "track-marketing-and-events",
+        "name": "Marketing & Events",
+        "icon": "megaphone",
+        "color": "#36A0B2"
+      },
+      "location": "Riverside",
+      "locationMeta": {
+        "location_id": "location-riverside",
+        "name": "Riverside",
+        "location_type": "room",
+        "level": "",
+        "notes": ""
+      },
+      "description": "In today\u2019s crowded market, great beer isn\u2019t enough\u2014you need a story that connects. This session explores how breweries can use storytelling to build brand loyalty, deepen community ties, and stand out online without feeling salesy or overproduced. Attendees will learn a simple framework for turning everyday moments into meaningful content and walk away with actionable strategies to humanize their brand voice across platforms. Whether you\u2019re a small taproom or a regional player, this talk will show you how to craft content that feels as intentional as the beer you brew.",
+      "speakers": [
+        "Stephanie Grant"
+      ],
+      "speakerIds": [
+        "presenter-stephanie-grant"
+      ],
+      "moderators": [
+        "Derek"
+      ],
+      "isPublic": true,
+      "sortOrder": 19,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-ed-session-2-21",
+      "title": "The Guild\u2019s Role in Today\u2019s Industry: A Discussion on What You Need Now",
+      "type": "session",
+      "date": "2026-04-10",
+      "startTime": "1:30 PM",
+      "endTime": "2:20 PM",
+      "block": "Ed Session 2",
+      "track": "Community & Culture",
+      "trackMeta": {
+        "track_id": "track-community-and-culture",
+        "name": "Community & Culture",
+        "icon": "users",
+        "color": "#7A5A43"
+      },
+      "location": "Cardinals Perch",
+      "locationMeta": {
+        "location_id": "location-cardinals-perch",
+        "name": "Cardinals Perch",
+        "location_type": "room",
+        "level": "",
+        "notes": ""
+      },
+      "description": "The craft brewing industry has changed dramatically in the past few years, and your Guild needs to, too. Join leaders of the MN Craft Brewers Guild to provide feedback on the big-picture future of how your Craft Brewers Guild should best serve you - the members - in this challenging time. This is a discussion and listening session to help shape the Guild's future. All feedback - positive and critical - is welcome!",
+      "speakers": [
+        "Bob Galligan",
+        "Kabel Lefto",
+        "Nate Schneider",
+        "Jess Talley"
+      ],
+      "speakerIds": [
+        "presenter-bob-galligan",
+        "presenter-kabel-lefto",
+        "presenter-nate-schneider",
+        "presenter-jess-talley"
+      ],
+      "moderators": [
+        "Bob",
+        "Jess"
+      ],
+      "isPublic": true,
+      "sortOrder": 20,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-ed-session-3-22",
+      "title": "From Brewer to Boss: Equipping First-Time Leaders in the Brewery",
+      "type": "session",
+      "date": "2026-04-10",
+      "startTime": "2:30 PM",
+      "endTime": "3:20 PM",
+      "block": "Ed Session 3",
+      "track": "Looking to the Future",
+      "trackMeta": {
+        "track_id": "track-looking-to-the-future",
+        "name": "Looking to the Future",
+        "icon": "lightbulb",
+        "color": "#F2C969"
+      },
+      "location": "Woodlands",
+      "locationMeta": {
+        "location_id": "location-woodlands",
+        "name": "Woodlands",
+        "location_type": "room",
+        "level": "",
+        "notes": ""
+      },
+      "description": "Great breweries don\u2019t fail because of bad beer; they struggle because great individual contributors are promoted into leadership without proper development. From Brewer to Boss is an interactive, workshop-style session designed to help brewery owners and managers equip first-time leaders with the tools they need to succeed. Participants will gain practical insights into why leadership requires training, how to reduce burnout in new managers, and how to build leaders who elevate both people and performance. Attendees will leave with immediately usable frameworks tailored specifically to brewery life.",
+      "speakers": [
+        "Ryan Mayfield"
+      ],
+      "speakerIds": [
+        "presenter-ryan-mayfield"
+      ],
+      "moderators": [
+        "Jim"
+      ],
+      "isPublic": true,
+      "sortOrder": 21,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-ed-session-3-23",
+      "title": "Where Do We Go From Here When Here Keeps Changing?",
+      "type": "session",
+      "date": "2026-04-10",
+      "startTime": "2:30 PM",
+      "endTime": "3:20 PM",
+      "block": "Ed Session 3",
+      "track": "Community & Culture",
+      "trackMeta": {
+        "track_id": "track-community-and-culture",
+        "name": "Community & Culture",
+        "icon": "users",
+        "color": "#7A5A43"
+      },
+      "location": "Wood Duck Pond",
+      "locationMeta": {
+        "location_id": "location-wood-duck-pond",
+        "name": "Wood Duck Pond",
+        "location_type": "room",
+        "level": "",
+        "notes": ""
+      },
+      "description": "The Legislative Committee of the MNCBG is a self nominating committee whose purpose is to \u201cprovide feedback and direction on behalf of the greater membership to the Guild\u2019s Board of Directors\u201d. The Committee is comprised of a Chair, Vice Chair, Communications officer and up to 7 other members. Current Committee Members are Mike Corneille, Jeremy Mathison, Jim Diley, Tessa Leung, Jon Erickson, and Bob Countryman.",
+      "speakers": [
+        "Members of the Legislative Committee"
+      ],
+      "speakerIds": [],
+      "moderators": [
+        "Bob"
+      ],
+      "isPublic": true,
+      "sortOrder": 22,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-ed-session-3-24",
+      "title": "Low & Non-Alcoholic \"Off-Flavor\" Sensory Workshop",
+      "type": "session",
+      "date": "2026-04-10",
+      "startTime": "2:30 PM",
+      "endTime": "3:20 PM",
+      "block": "Ed Session 3",
+      "track": "Brewing Techniques & Innovation",
+      "trackMeta": {
+        "track_id": "track-brewing-techniques-and-innovation",
+        "name": "Brewing Techniques & Innovation",
+        "icon": "leaf",
+        "color": "#4E7F4E"
+      },
+      "location": "Minnesota Valley Ballroom",
+      "locationMeta": {
+        "location_id": "location-minnesota-valley-ballroom",
+        "name": "Minnesota Valley Ballroom",
+        "location_type": "ballroom",
+        "level": "",
+        "notes": ""
+      },
+      "description": "Crafting quality low- and no-alcohol beers can be challenging. It can also be risky if not approached with a thorough understanding of the entire process, from raw ingredient selection all the way to stabilization in the package.This sensory workshop helps brewers identify some of the most common compounds behind the \"worty\" and vegetal off-flavors in NA beers, while also  exploring the science driving the complexities of their production.",
+      "speakers": [
+        "Alesha Ivey"
+      ],
+      "speakerIds": [
+        "presenter-alesha-ivey"
+      ],
+      "moderators": [
+        "Amanda"
+      ],
+      "isPublic": true,
+      "sortOrder": 23,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-ed-session-3-25",
+      "title": "S.A.L.E.S. Training: Selling Alcohol Legally, Effectively & Safely",
+      "type": "session",
+      "date": "2026-04-10",
+      "startTime": "2:30 PM",
+      "endTime": "3:20 PM",
+      "block": "Ed Session 3",
+      "track": "Business & Operations",
+      "trackMeta": {
+        "track_id": "track-business-and-operations",
+        "name": "Business & Operations",
+        "icon": "handshake",
+        "color": "#674530"
+      },
+      "location": "Cardinals Perch",
+      "locationMeta": {
+        "location_id": "location-cardinals-perch",
+        "name": "Cardinals Perch",
+        "location_type": "room",
+        "level": "",
+        "notes": ""
+      },
+      "description": "This workshop focuses on how hospitality, guest experience, and ethical sales drive success. By aligning everyday decisions, from legal compliance to team collaboration- you\u2019ll learn to manage the customer experience to minimize risk and maximize revenue. This session equips your team to serve both safely and profitably.\n\nTraining by Robert Foster & the Minnesota Licensed Beverage Association. Robert Foster has worked in the hospitality industry since 1998, holding roles from busser to general manager. With experience spanning fine dining to multi-location operations, he\u2019s led teams, created beverage programs, taught culinary classes, and consulted across the industry. For over 15 years, he has partnered with the MLBA, training countless businesses\u2014from local restaurants to regional venues\u2014on responsible alcohol sales and service. Now, Robert focuses on sales training, hospitality leadership, and empowering teams to serve legally, ethically, and confidently.",
+      "speakers": [
+        "Robert Fulton"
+      ],
+      "speakerIds": [
+        "presenter-robert-fulton"
+      ],
+      "moderators": [
+        "Nate"
+      ],
+      "isPublic": true,
+      "sortOrder": 24,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-ed-session-3-26",
+      "title": "Your Taproom Is Already a Third Place \u2014 Act Like It",
+      "type": "session",
+      "date": "2026-04-10",
+      "startTime": "2:30 PM",
+      "endTime": "3:20 PM",
+      "block": "Ed Session 3",
+      "track": "Marketing & Events",
+      "trackMeta": {
+        "track_id": "track-marketing-and-events",
+        "name": "Marketing & Events",
+        "icon": "megaphone",
+        "color": "#36A0B2"
+      },
+      "location": "Riverside",
+      "locationMeta": {
+        "location_id": "location-riverside",
+        "name": "Riverside",
+        "location_type": "room",
+        "level": "",
+        "notes": ""
+      },
+      "description": "Third places have declined, but breweries have increasingly become a civic gathering space in many communities. This session explores how taprooms are already generating social capital and how we can plan, adapt, respond, and matter.",
+      "speakers": [
+        "Ben Neitge",
+        "Jordan Weller",
+        "Robert Fulton"
+      ],
+      "speakerIds": [
+        "presenter-ben-neitge",
+        "presenter-jordan-weller",
+        "presenter-robert-fulton"
+      ],
+      "moderators": [
+        "Jordan",
+        "Ben"
+      ],
+      "isPublic": true,
+      "sortOrder": 25,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-affinity-group-28",
+      "title": "Amarillo Allies",
+      "type": "affinity_group",
+      "date": "2026-04-10",
+      "startTime": "3:30 PM",
+      "endTime": "4:20 PM",
+      "block": "Affinity Group",
+      "track": "",
+      "trackMeta": {},
+      "location": "Wood Duck Pond",
+      "locationMeta": {
+        "location_id": "location-wood-duck-pond",
+        "name": "Wood Duck Pond",
+        "location_type": "room",
+        "level": "",
+        "notes": ""
+      },
+      "description": "Affinity Groups are designed to connect industry peers for shared experiences and discussions. These groups meet during designated sessions to foster networking based on common roles, identities, or interests within the industry.",
+      "speakers": [],
+      "speakerIds": [],
+      "moderators": [
+        "Jeff"
+      ],
+      "isPublic": true,
+      "sortOrder": 26,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-affinity-group-29",
+      "title": "Brewdog Brewpubs",
+      "type": "affinity_group",
+      "date": "2026-04-10",
+      "startTime": "3:30 PM",
+      "endTime": "4:20 PM",
+      "block": "Affinity Group",
+      "track": "",
+      "trackMeta": {},
+      "location": "Minnesota Valley Ballroom",
+      "locationMeta": {
+        "location_id": "location-eagles-nest",
+        "name": "Minnesota Valley Ballroom",
+        "location_type": "room",
+        "level": "",
+        "notes": ""
+      },
+      "description": "Affinity Groups are designed to connect industry peers for shared experiences and discussions. These groups meet during designated sessions to foster networking based on common roles, identities, or interests within the industry.",
+      "speakers": [],
+      "speakerIds": [],
+      "moderators": [
+        "Riley"
+      ],
+      "isPublic": true,
+      "sortOrder": 27,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-affinity-group-30",
+      "title": "Centennial Sippers",
+      "type": "affinity_group",
+      "date": "2026-04-10",
+      "startTime": "3:30 PM",
+      "endTime": "4:20 PM",
+      "block": "Affinity Group",
+      "track": "",
+      "trackMeta": {},
+      "location": "Hawks Ridge",
+      "locationMeta": {
+        "location_id": "location-hawks-ridge",
+        "name": "Hawks Ridge",
+        "location_type": "room",
+        "level": "",
+        "notes": ""
+      },
+      "description": "Affinity Groups are designed to connect industry peers for shared experiences and discussions. These groups meet during designated sessions to foster networking based on common roles, identities, or interests within the industry.",
+      "speakers": [],
+      "speakerIds": [],
+      "moderators": [
+        "Kabel"
+      ],
+      "isPublic": true,
+      "sortOrder": 28,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-affinity-group-31",
+      "title": "Chinook & Company",
+      "type": "affinity_group",
+      "date": "2026-04-10",
+      "startTime": "3:30 PM",
+      "endTime": "4:20 PM",
+      "block": "Affinity Group",
+      "track": "",
+      "trackMeta": {},
+      "location": "Mallard Point",
+      "locationMeta": {
+        "location_id": "location-mallard-point",
+        "name": "Mallard Point",
+        "location_type": "room",
+        "level": "",
+        "notes": ""
+      },
+      "description": "Affinity Groups are designed to connect industry peers for shared experiences and discussions. These groups meet during designated sessions to foster networking based on common roles, identities, or interests within the industry.",
+      "speakers": [],
+      "speakerIds": [],
+      "moderators": [
+        "Morgan"
+      ],
+      "isPublic": true,
+      "sortOrder": 29,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-affinity-group-32",
+      "title": "Citra Crew",
+      "type": "affinity_group",
+      "date": "2026-04-10",
+      "startTime": "3:30 PM",
+      "endTime": "4:20 PM",
+      "block": "Affinity Group",
+      "track": "",
+      "trackMeta": {},
+      "location": "Riverside",
+      "locationMeta": {
+        "location_id": "location-riverside",
+        "name": "Riverside",
+        "location_type": "room",
+        "level": "",
+        "notes": ""
+      },
+      "description": "Affinity Groups are designed to connect industry peers for shared experiences and discussions. These groups meet during designated sessions to foster networking based on common roles, identities, or interests within the industry.",
+      "speakers": [],
+      "speakerIds": [],
+      "moderators": [
+        "Nate"
+      ],
+      "isPublic": true,
+      "sortOrder": 30,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-affinity-group-33",
+      "title": "Galaxy Gang",
+      "type": "affinity_group",
+      "date": "2026-04-10",
+      "startTime": "3:30 PM",
+      "endTime": "4:20 PM",
+      "block": "Affinity Group",
+      "track": "",
+      "trackMeta": {},
+      "location": "Owl Overlook",
+      "locationMeta": {
+        "location_id": "location-owl-overlook",
+        "name": "Owl Overlook",
+        "location_type": "room",
+        "level": "",
+        "notes": ""
+      },
+      "description": "Affinity Groups are designed to connect industry peers for shared experiences and discussions. These groups meet during designated sessions to foster networking based on common roles, identities, or interests within the industry.",
+      "speakers": [],
+      "speakerIds": [],
+      "moderators": [
+        "Derek"
+      ],
+      "isPublic": true,
+      "sortOrder": 31,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-affinity-group-34",
+      "title": "Magnum Members",
+      "type": "affinity_group",
+      "date": "2026-04-10",
+      "startTime": "3:30 PM",
+      "endTime": "4:20 PM",
+      "block": "Affinity Group",
+      "track": "",
+      "trackMeta": {},
+      "location": "White Pelican Bay",
+      "locationMeta": {
+        "location_id": "location-white-pelican-bay",
+        "name": "White Pelican Bay",
+        "location_type": "room",
+        "level": "",
+        "notes": ""
+      },
+      "description": "Affinity Groups are designed to connect industry peers for shared experiences and discussions. These groups meet during designated sessions to foster networking based on common roles, identities, or interests within the industry.",
+      "speakers": [],
+      "speakerIds": [],
+      "moderators": [
+        "Jeremy"
+      ],
+      "isPublic": true,
+      "sortOrder": 32,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-affinity-group-35",
+      "title": "Mosaic Meeting Mob",
+      "type": "affinity_group",
+      "date": "2026-04-10",
+      "startTime": "3:30 PM",
+      "endTime": "4:20 PM",
+      "block": "Affinity Group",
+      "track": "",
+      "trackMeta": {},
+      "location": "Cardinals Perch",
+      "locationMeta": {
+        "location_id": "location-cardinals-perch",
+        "name": "Cardinals Perch",
+        "location_type": "room",
+        "level": "",
+        "notes": ""
+      },
+      "description": "Affinity Groups are designed to connect industry peers for shared experiences and discussions. These groups meet during designated sessions to foster networking based on common roles, identities, or interests within the industry.",
+      "speakers": [],
+      "speakerIds": [],
+      "moderators": [
+        "Jordan"
+      ],
+      "isPublic": true,
+      "sortOrder": 33,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-affinity-group-36",
+      "title": "Saaz Squad",
+      "type": "affinity_group",
+      "date": "2026-04-10",
+      "startTime": "3:30 PM",
+      "endTime": "4:20 PM",
+      "block": "Affinity Group",
+      "track": "",
+      "trackMeta": {},
+      "location": "Woodlands",
+      "locationMeta": {
+        "location_id": "location-woodlands",
+        "name": "Woodlands",
+        "location_type": "room",
+        "level": "",
+        "notes": ""
+      },
+      "description": "Affinity Groups are designed to connect industry peers for shared experiences and discussions. These groups meet during designated sessions to foster networking based on common roles, identities, or interests within the industry.",
+      "speakers": [],
+      "speakerIds": [],
+      "moderators": [
+        "Ben"
+      ],
+      "isPublic": true,
+      "sortOrder": 34,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-logistics-1",
+      "title": "Conference Check-in",
+      "type": "logistics",
+      "date": "2026-04-10",
+      "startTime": "8:00 AM",
+      "endTime": "9:00 AM",
+      "block": "Logistics",
+      "track": "",
+      "trackMeta": {},
+      "location": "Lobby",
+      "locationMeta": {},
+      "description": "Conference Check-in",
+      "speakers": [],
+      "speakerIds": [],
+      "moderators": [],
+      "isPublic": true,
+      "sortOrder": 35,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-logistics-2",
+      "title": "Exhibitor Hall Open",
+      "type": "logistics",
+      "date": "2026-04-10",
+      "startTime": "8:00 AM",
+      "endTime": "",
+      "block": "Logistics",
+      "track": "",
+      "trackMeta": {},
+      "location": "2nd Floor - Exhibitor Hall",
+      "locationMeta": {},
+      "description": "Exhibits",
+      "speakers": [],
+      "speakerIds": [],
+      "moderators": [],
+      "isPublic": true,
+      "sortOrder": 36,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-logistics-3",
+      "title": "Bloodies & Bubbles Bar",
+      "type": "logistics",
+      "date": "2026-04-10",
+      "startTime": "8:00 AM",
+      "endTime": "10:00 AM",
+      "block": "Logistics",
+      "track": "",
+      "trackMeta": {},
+      "location": "2nd Level Bar",
+      "locationMeta": {},
+      "description": "Bloodies & Bubbles Bar",
+      "speakers": [],
+      "speakerIds": [],
+      "moderators": [],
+      "isPublic": true,
+      "sortOrder": 37,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-logistics-4",
+      "title": "Affinity Groups",
+      "type": "logistics",
+      "date": "2026-04-10",
+      "startTime": "10:15 AM",
+      "endTime": "10:50 AM",
+      "block": "Logistics",
+      "track": "",
+      "trackMeta": {},
+      "location": "Affinity Groups - Locations Listed Below",
+      "locationMeta": {},
+      "description": "Affinity Groups are designed to connect industry peers for shared experiences and discussions. These groups meet during designated sessions to foster networking based on common roles, identities, or interests within the industry.",
+      "speakers": [],
+      "speakerIds": [],
+      "moderators": [],
+      "isPublic": true,
+      "sortOrder": 38,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-logistics-5",
+      "title": "Snacks Available/Coffee",
+      "type": "logistics",
+      "date": "2026-04-10",
+      "startTime": "10:30 AM",
+      "endTime": "",
+      "block": "Logistics",
+      "track": "",
+      "trackMeta": {},
+      "location": "Red Fox Den",
+      "locationMeta": {},
+      "description": "Snacks Available/Coffee",
+      "speakers": [],
+      "speakerIds": [],
+      "moderators": [],
+      "isPublic": true,
+      "sortOrder": 39,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-logistics-6",
+      "title": "Lunch, Raffle, Exhibitor Time",
+      "type": "logistics",
+      "date": "2026-04-10",
+      "startTime": "12:00 PM",
+      "endTime": "1:15 PM",
+      "block": "Logistics",
+      "track": "",
+      "trackMeta": {},
+      "location": "Ballroom, Exhibitor Hall",
+      "locationMeta": {},
+      "description": "Lunch, Raffle, Exhibitor Time",
+      "speakers": [],
+      "speakerIds": [],
+      "moderators": [],
+      "isPublic": true,
+      "sortOrder": 40,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-logistics-7",
+      "title": "A Word from Our Sponsor, Husch Blackwell",
+      "type": "logistics",
+      "date": "2026-04-10",
+      "startTime": "12:00 PM",
+      "endTime": "1:15 PM",
+      "block": "Logistics",
+      "track": "",
+      "trackMeta": {},
+      "location": "Ballroom",
+      "locationMeta": {},
+      "description": "A Word from Our Sponsor, Husch Blackwell",
+      "speakers": [],
+      "speakerIds": [],
+      "moderators": [],
+      "isPublic": true,
+      "sortOrder": 41,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-logistics-8",
+      "title": "Affinity Groups",
+      "type": "logistics",
+      "date": "2026-04-10",
+      "startTime": "3:30 PM",
+      "endTime": "4:20 PM",
+      "block": "Logistics",
+      "track": "",
+      "trackMeta": {},
+      "location": "Affinity Groups - Locations Listed Below",
+      "locationMeta": {},
+      "description": "Affinity Groups are designed to connect industry peers for shared experiences and discussions. These groups meet during designated sessions to foster networking based on common roles, identities, or interests within the industry.",
+      "speakers": [],
+      "speakerIds": [],
+      "moderators": [],
+      "isPublic": true,
+      "sortOrder": 42,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-logistics-9",
+      "title": "Lagersmith Aluminate Award Announcement",
+      "type": "logistics",
+      "date": "2026-04-10",
+      "startTime": "4:30 PM",
+      "endTime": "",
+      "block": "Logistics",
+      "track": "",
+      "trackMeta": {},
+      "location": "Ballroom",
+      "locationMeta": {},
+      "description": "Lagersmith Aluminate Award Announcement",
+      "speakers": [],
+      "speakerIds": [],
+      "moderators": [],
+      "isPublic": true,
+      "sortOrder": 43,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-logistics-10",
+      "title": "Closing Announcements & Raffle Drawing",
+      "type": "logistics",
+      "date": "2026-04-10",
+      "startTime": "4:30 PM",
+      "endTime": "",
+      "block": "Logistics",
+      "track": "",
+      "trackMeta": {},
+      "location": "Minnesota Valley Ballroom",
+      "locationMeta": {
+        "location_id": "location-minnesota-valley-ballroom",
+        "name": "Minnesota Valley Ballroom",
+        "location_type": "ballroom",
+        "level": "",
+        "notes": ""
+      },
+      "description": "Closing Announcements & Raffle Drawing",
+      "speakers": [],
+      "speakerIds": [],
+      "moderators": [],
+      "isPublic": true,
+      "sortOrder": 44,
+      "notes": ""
+    },
+    {
+      "id": "2026-04-10-logistics-11",
+      "title": "Cheers & Beers Hour",
+      "type": "logistics",
+      "date": "2026-04-10",
+      "startTime": "4:45 PM",
+      "endTime": "5:30 PM",
+      "block": "Logistics",
+      "track": "",
+      "trackMeta": {},
+      "location": "Exhibitor Hall",
+      "locationMeta": {},
+      "description": "Social",
+      "speakers": [],
+      "speakerIds": [],
+      "moderators": [],
+      "isPublic": true,
+      "sortOrder": 45,
+      "notes": ""
+    }
+  ],
+  "presenters": [
+    {
+      "id": "presenter-alesha-ivey",
+      "name": "Alesha Ivey",
+      "email": "",
+      "bio": "Alesha is the Technical Sales Manager for Lallemand Brewing here in Minnesota. After spending the last 10 years on the production side of the industry in both wine and beer, she loves having this new platform to help other brewers create quality focused and innovative products.",
+      "presentationTitle": "Low & Non-Alcoholic \"Off-Flavor\" Sensory Workshop",
+      "sessionIds": [
+        "2026-04-10-ed-session-3-24"
+      ]
+    },
+    {
+      "id": "presenter-audrey-robinson",
+      "name": "Audrey Robinson",
+      "email": "",
+      "bio": "Little Thistle is a community-oriented brewery in Rochester MN. I like many small business employees wear a lot of hats and do my best not to drop one. As a team we work hard to create a welcoming atmosphere paired with delicious beer.",
+      "presentationTitle": "Brewing Bonds - Community & Foot Traffic",
+      "sessionIds": [
+        "2026-04-10-ed-session-1-12"
+      ]
+    },
+    {
+      "id": "presenter-ben-hugus",
+      "name": "Ben Hugus",
+      "email": "",
+      "bio": "Ben Hugus is the founder and CEO of Ursa Minor Brewing, a brand defined by bold craftsmanship and a commitment to continuous internal growth since its inception in 2018. Ursa Minor has experienced a remarkable trajectory- from 800 to nearly 5,000bbls in 7 years. Ben remains dedicated to scaling the brewery's impact while maintaining the passionate quality that defines the North Shore staple.",
+      "presentationTitle": "Future Planning in Headwinds",
+      "sessionIds": [
+        "2026-04-10-ed-session-2-17"
+      ]
+    },
+    {
+      "id": "presenter-ben-neitge",
+      "name": "Ben Neitge",
+      "email": "",
+      "bio": "Ben Neitge is the Events Coordinator at Forgotten Star Brewing, where he produces and manages hundreds of public and private events each year, from neighborhood gatherings to large-scale festivals. With a background in Sociology and Urban Studies from Augsburg University and over a decade in the Minneapolis music scene, he brings a community-centered, people-first approach to creating welcoming, revenue-driving experiences for breweries. Outside of work, he\u2019s works as a fly fishing guide and is a proud father figure to two adopted kitty boys.",
+      "presentationTitle": "Your Taproom Is Already a Third Place \u2014 Act Like It",
+      "sessionIds": [
+        "2026-04-10-ed-session-3-26"
+      ]
+    },
+    {
+      "id": "presenter-bob-galligan",
+      "name": "Bob Galligan",
+      "email": "",
+      "bio": "Bob Galligan began his brewing career hand canning in Austin Texas in 2012. Since then, he has been a brewer, tap room manager, salesperson, and quality and innovation manager. Most recently, he was the Sensory Specialist at Surly Brewing from 2017-2022. He served on the MNCBG Board in 2021 and joined in his current role as the Guild's Director of Government & Industry Relations in early 2022.",
+      "presentationTitle": "The Guild\u2019s Role in Today\u2019s Industry: A Discussion on What You Need Now",
+      "sessionIds": [
+        "2026-04-10-ed-session-2-21"
+      ]
+    },
+    {
+      "id": "presenter-chris-farmand",
+      "name": "Chris Farmand",
+      "email": "",
+      "bio": "Chris often hears the question \u201cWhy do you care so much?\u201d In 2010 Chris was fortunate enough to assist a craft brewery with their bookkeeping, compliance and taxes. This gave him a glimpse into the complexity of running a craft brewery. Shortly thereafter, he founded Small Batch Standard, which has become the premier financial agency for craft. Everyday, Chris and the SBS team are seeking the opportunity to assist the craft alcohol industry to generate more profit. Small Batch Standard helps breweries uncover profit through outsourced accounting, tax compliance, and benchmark consulting. Chris has worked with over 300 breweries and is driven by building long-lasting deep relationships. His answer, \u201cBecause I think you can win!\u201d Chris graduated from the University of Florida with a Bachelor of Science in Business Finance in 2002. Then in 2006, he received his Master of Business Administration from the University of North Florida.\"",
+      "presentationTitle": "Winning in Distribution",
+      "sessionIds": [
+        "2026-04-10-ed-session-1-16"
+      ]
+    },
+    {
+      "id": "presenter-dave-infante",
+      "name": "Dave Infante",
+      "email": "",
+      "bio": "Dave is an award-winning journalist who covers the food and drink industries. He publishes Fingers, an independent newsletter about drinking in America. He also works as a contributing editor and columnist at VinePair, where he publishes the weekly beer-industry column Hop Take. He lives in Richmond, Virginia.",
+      "presentationTitle": "Keynote: Craft Beer vs. The World",
+      "sessionIds": [
+        "2026-04-10-keynote-01"
+      ]
+    },
+    {
+      "id": "presenter-dawn-finnie",
+      "name": "Dawn Finnie",
+      "email": "",
+      "bio": "Dawn Finnie is the co-founder of Little Thistle Brewing Company in Rochester, MN. She\u2019s had a love of craft beer in Minnesota for over 30 years and respects thoughtful brewing, community-driven taprooms, and beers with a good story. She has served on the Board of Directors and as board president of the MN Craft Brewers Guild.",
+      "presentationTitle": "Brewing Bonds - Community & Foot Traffic",
+      "sessionIds": [
+        "2026-04-10-ed-session-1-12"
+      ]
+    },
+    {
+      "id": "presenter-elliot-ginsburg",
+      "name": "Elliot Ginsburg",
+      "email": "",
+      "bio": "Elliot has been representing alcohol beverage companies for over ten years on everything from trademark matters, to employee issues, to internal business disputes, to start-up financing and documentation, to regulatory issues, etc. He has built long-lasting relationships with his brewery clients, and has also guided many of them through various hemp/cannabis related issues. He has been working with cannabis businesses for over seven years.",
+      "presentationTitle": "State of the Hemp Market",
+      "sessionIds": [
+        "2026-04-10-ed-session-1-15"
+      ]
+    },
+    {
+      "id": "presenter-eric-sannerud",
+      "name": "Eric Sannerud",
+      "email": "",
+      "bio": "Eric cares a lot about hops. As President of Sannerud Hop Consulting, Eric serves brewers, hop farmers, and hop marketers across North America with strategic marketing, product development, and education services. Eric serves Oregon hop farming families with West Coast Hop Breeding and provides expert hop market analysis and education in a free monthly newsletter called Hop Notes.",
+      "presentationTitle": "Hop Quality Analysis for Dummies",
+      "sessionIds": [
+        "2026-04-10-ed-session-1-13"
+      ]
+    },
+    {
+      "id": "presenter-jen-reise",
+      "name": "Jen Reise",
+      "email": "",
+      "bio": "Jen Randolph Reise is one of Minnesota's leading cannabis business consultants, specializing in helping first-time entrepreneurs navigate the state's complex regulatory landscape. As founder of North Star Cannabis Consulting, Jen has guided over 500 entrepreneurs through business formation, regulatory compliance, and growth strategies. Her unique combination of legal training, entrepreneurial experience, and community-building expertise makes complex cannabis regulations accessible for business owners at every stage.",
+      "presentationTitle": "State of the Hemp Market",
+      "sessionIds": [
+        "2026-04-10-ed-session-1-15"
+      ]
+    },
+    {
+      "id": "presenter-jess-talley",
+      "name": "Jess Talley",
+      "email": "",
+      "bio": "Jess is a association nonprofit specialist with 15 years in nonprofit administration. She joined the industry in 2018 as the Guild's first Marketing and Communications Manager, and was promoted to Executive Director in late 2021. She is responsible for the administration, budgeting, and management of the organization's services, programs, events, and staff, and works closely with the Board to ensure the Guild is carrying out our strategic goals and commitments to members.",
+      "presentationTitle": "The Guild\u2019s Role in Today\u2019s Industry: A Discussion on What You Need Now",
+      "sessionIds": [
+        "2026-04-10-ed-session-2-21"
+      ]
+    },
+    {
+      "id": "presenter-jim-diley",
+      "name": "Jim Diley",
+      "email": "",
+      "bio": "Jim Diley is the Co-Founder and COO of Fulton Brewing Company, and over the past 15 years has watched it grow from producing 94 BBLs in it's first year, to becoming a regional craft brewery. Jim currently serves on the MNCBG Board of Directors. Prior to starting Fulton, Jim worked in alcoholic beverages as an attorney helping others realize their goals.",
+      "presentationTitle": "Where Do We Go From Here When Here Keeps Changing?",
+      "sessionIds": []
+    },
+    {
+      "id": "presenter-jon-halper",
+      "name": "Jon Halper",
+      "email": "",
+      "bio": "Jon Halper is the CEO and Owner of Top Ten Liquors, a Minnesota-based retail chain known for its curated selection, strong value, and exceptional customer service. Under his leadership, the company has become one of the state\u2019s leading retailers of hemp-derived THC beverages and edibles, helping introduce thousands of consumers to the category through education, assortment, and responsible retail practices. Jon is actively involved in shaping the future of the low-dose THC market, working with brands, policymakers, and industry partners to support safe, regulated growth. He\u2019s especially interested in what happens when the worlds of alcohol, cannabis, and retail collide\u2014and how retailers can make the experience fun, approachable, and responsible for customers.",
+      "presentationTitle": "State of the Hemp Market",
+      "sessionIds": [
+        "2026-04-10-ed-session-1-15"
+      ]
+    },
+    {
+      "id": "presenter-jordan-weller",
+      "name": "Jordan Weller",
+      "email": "",
+      "bio": "Jordan Weller is the Taproom Manager & Events Coordinator at 56 Brewing, with nearly 15 years of experience in the craft beverage industry. Holding a degree in Music and Entertainment Business, he combines industry knowledge with creative event planning to produce engaging, community-driven experiences. Passionate about crafting community, Jordan creates events that bring people together over great beer and shared moments.",
+      "presentationTitle": "Your Taproom Is Already a Third Place \u2014 Act Like It",
+      "sessionIds": [
+        "2026-04-10-ed-session-3-26"
+      ]
+    },
+    {
+      "id": "presenter-julie-o-donnell",
+      "name": "Julie O'Donnell",
+      "email": "",
+      "bio": "Julie O'Donnell joined Intuition Brewing as a beertender in June of 2024 and was promoted to Taproom Manager in 2025. She leads guest experience, staff development and assists with daily operations, coaching teams to deliver warm, consistent service. Julie's focus on her hospitality approach and staff training turns first-time visitors into regulars.",
+      "presentationTitle": "Brewing Bonds - Community & Foot Traffic",
+      "sessionIds": [
+        "2026-04-10-ed-session-1-12"
+      ]
+    },
+    {
+      "id": "presenter-kabel-lefto",
+      "name": "Kabel Lefto",
+      "email": "",
+      "bio": "Kabel is the current Vice President of the MNCBG Board, after having served as an officer for a few years. Kabel has worked in breweries throughout the Twin Cities, and is currently the Packaging Technician at Insight Brewing Company.",
+      "presentationTitle": "The Guild\u2019s Role in Today\u2019s Industry: A Discussion on What You Need Now",
+      "sessionIds": [
+        "2026-04-10-ed-session-2-21"
+      ]
+    },
+    {
+      "id": "presenter-liz-heimer",
+      "name": "Liz Heimer",
+      "email": "",
+      "bio": "As the co-owner navigating the many challenges of opening a newer brewery in the current craft beer landscape (Intuition Brewing), Liz is passionate about crafting unique and innovative ideas at the brewery. With a focus on creativity, Liz strives to push the boundaries to improve the customer experience in the taproom.",
+      "presentationTitle": "Brewing Bonds - Community & Foot Traffic",
+      "sessionIds": [
+        "2026-04-10-ed-session-1-12"
+      ]
+    },
+    {
+      "id": "presenter-marty-scott",
+      "name": "Marty Scott",
+      "email": "",
+      "bio": "Marty Scott has been brewing commercially for more than 15 years. He is Revolution Brewing's Barrel Program Manager and is the Proprietor of Barrelponix.",
+      "presentationTitle": "Stave New World: Methodologies for Managing the Modern (British) Brewer's Wood Cellar",
+      "sessionIds": [
+        "2026-04-10-ed-session-2-19"
+      ]
+    },
+    {
+      "id": "presenter-meghan-walsh",
+      "name": "Meghan Walsh",
+      "email": "",
+      "bio": "As overdose prevention director, Meghan hosts regular naloxone trainings for community and professional groups and manages supply and kit distribution. While the Brewers Conference is an audience Meghan has not worked with before, she is delighted to be here and excited to share about the importance of naloxone as a tool for public health and safety.",
+      "presentationTitle": "Naloxone Training",
+      "sessionIds": [
+        "2026-04-10-ed-session-1-14"
+      ]
+    },
+    {
+      "id": "presenter-michaelann-gillis",
+      "name": "Michaelann Gillis",
+      "email": "",
+      "bio": "Michaelann Gillis has a degree in Hospitality Management and over 30 years working in restaurants, starting with her family owned taverns in Wisconsin. Michaelann is well equipped to hire and train front of house teams, however, writing beverage programs is her real passion. She has worked for several prominent breweries and restaurants around the Twin Cities in her career. She is now one of the Twin Cities most respected Bar & Beverage Consultants helping create and re-create successful bar programs around the Twin Cities.",
+      "presentationTitle": "Restaurant Hospitality for Breweries - Turning your Brewery into a Successful F&B Operation",
+      "sessionIds": [
+        "2026-04-10-ed-session-2-18"
+      ]
+    },
+    {
+      "id": "presenter-mike-corneille",
+      "name": "Mike Corneille",
+      "email": "",
+      "bio": "",
+      "presentationTitle": "Future Planning in Headwinds",
+      "sessionIds": [
+        "2026-04-10-ed-session-2-17"
+      ]
+    },
+    {
+      "id": "presenter-nate-schneider",
+      "name": "Nate Schneider",
+      "email": "",
+      "bio": "Nate Schneider is the current President of the MNCBG Board of Directors, after serving two years and holding the positions of ICO and Treasurer. Nate has been in the industry 10 years in every aspect of the brewing industry, including sales, management, production, VP, and co-owner. Nathan served eight years in the Army National Guard.",
+      "presentationTitle": "The Guild\u2019s Role in Today\u2019s Industry: A Discussion on What You Need Now",
+      "sessionIds": [
+        "2026-04-10-ed-session-2-21"
+      ]
+    },
+    {
+      "id": "presenter-robert-fulton",
+      "name": "Robert Fulton",
+      "email": "",
+      "bio": "Robert Fulton has worked in the hospitality industry since 1998, holding roles from busser to general manager. With experience spanning fine dining to multi-location operations, he\u2019s led teams, created beverage programs, taught culinary classes, and consulted across the industry. For over 15 years, he has partnered with the MLBA, training countless businesses\u2014from local restaurants to regional venues\u2014on responsible alcohol sales and service. Now, Robert focuses on sales training, hospitality leadership, and empowering teams to serve legally, ethically, and confidently.",
+      "presentationTitle": "S.A.L.E.S. Training: Selling Alcohol Legally, Effectively & Safely",
+      "sessionIds": [
+        "2026-04-10-ed-session-3-25",
+        "2026-04-10-ed-session-3-26"
+      ]
+    },
+    {
+      "id": "presenter-ryan-bandy",
+      "name": "Ryan Bandy",
+      "email": "",
+      "bio": "Ryan Bandy is Chief Business Officer of Indeed Brewing Company, a Minneapolis- and Milwaukee-based brewery founded in 2012. Ryan joined Indeed over a decade ago, getting his start in packaging, snapping PakTechs onto cans and waxing tops of bottles. He\u2019s since served as Sales Director, leading the brewery\u2019s distribution and sales efforts, as well as Director of Experience, growing the community impact of Indeed\u2019s events and creating welcoming taproom spaces for the brewery\u2019s taprooms in Minneapolis and Milwaukee. With experience in every department of the brewery, from back of the house to the taproom, Ryan is uniquely aware of the ways brewery\u2019s decision-making processes impact efficiencies at all levels of production, sales, and service.",
+      "presentationTitle": "Future Planning in Headwinds",
+      "sessionIds": [
+        "2026-04-10-ed-session-2-17"
+      ]
+    },
+    {
+      "id": "presenter-ryan-mayfield",
+      "name": "Ryan Mayfield",
+      "email": "",
+      "bio": "Ryan Mayfield is a leadership coach who helps brewery professionals build healthy leaders, strong teams, and thriving cultures. Through Craft Leadership, he equips clients with practical tools to lead with confidence, improve communication, and reduce daily frustrations. Craft has supported top breweries like Other Half, Rhinegeist, and Creature Comforts in navigating leadership and team challenges. Based in Tulsa, Ryan lives with his wife, teenage son, and opinionated beagle, Rooster.",
+      "presentationTitle": "From Brewer to Boss: Equipping First-Time Leaders in the Brewery",
+      "sessionIds": [
+        "2026-04-10-ed-session-3-22"
+      ]
+    },
+    {
+      "id": "presenter-sara-phelps",
+      "name": "Sara Phelps",
+      "email": "",
+      "bio": "Sara graduated from the University of Minnesota, Twin Cities, earning a degree in Journalism and Political Science. Sara\u2019s professional career began at a National Market Research firm where she served as a Senior Operations Manager and implemented and designed measurement tools for customer service for Coca Cola, Harrah\u2019s Entertainment and General Motors. Her love of hospitality and restaurant operations brought her back to the industry in 2010 where she served as the Assistant General Manager of Smack Shack in Minneapolis, to turn the once famous food truck into one of Minneapolis\u2019 most popular brick and mortar restaurants. Her strong attention to detail and commanding leadership style led to her role as Project Manager for The Lexington Restaurant Group where she was charged with completion of a long awaited 3 year renovation project. After achieving a restaurant opening, Sara moved to the role of General Manager and then Events Director for the property and served there until 2021. Sara\u2019s commitment to exceptional guest service and her love of hospitality have led her to create her consultancy as skphelps Consulting LLC. Her work at Mise en Place allows her to share her love of front of house operations with clients at all levels of dining. She serves as an industry expert on Human Resources, FOH Training, Organizational Leadership, FOH Systems, & Staff Development.\"",
+      "presentationTitle": "Restaurant Hospitality for Breweries - Turning your Brewery into a Successful F&B Operation",
+      "sessionIds": [
+        "2026-04-10-ed-session-2-18"
+      ]
+    },
+    {
+      "id": "presenter-stephanie-grant",
+      "name": "Stephanie Grant",
+      "email": "",
+      "bio": "Stephanie Grant is an Atlanta-based content strategist and James Beard\u2013nominated writer who helps breweries stand out online through storytelling. She has worked in the beer industry since 2017\u2014starting as a writer covering beer and makers, then moving in-house as a brewery marketing coordinator. That combination of journalism and hands-on brewery experience shapes how she approaches storytelling today. Stephanie\u2019s writing has appeared in CraftBeer.com, Good Beer Hunting, and The New Brewer. She now works independently with breweries to translate behind-the-scenes work into story-driven content that builds trust, reflects the in-person experience, and gives people a reason to choose them.\"",
+      "presentationTitle": "Telling Your Brand Story Online: How to Connect and Stand Out Online",
+      "sessionIds": [
+        "2026-04-10-ed-session-2-20"
+      ]
+    },
+    {
+      "id": "presenter-steven-brown",
+      "name": "Steven Brown",
+      "email": "",
+      "bio": "Steven Brown is the Founder and CEO of Nothing But Hemp, an award-winning cannabinoid product development and manufacturing company, and the Midwest Botanical Coalition. He launched one of the first hemp retail stores in the United States, which has grown into a national operation with products sold in liquor stores, hemp stores, dispensaries, and health shops nationwide. Under Brown\u2019s leadership, the Minnesota-based manufacturing team produces over one million gummies per month, sonicates nano emulsion including hemp-derived THC products, mushroom supplements, and functional wellness formulations. Nothing But Hemp has received significant industry recognition, including Minnesota Monthly\u2019s \u201cBest Hemp Company\u201d award and Feedspot\u2019s recognition as one of the Top Hemp Blogs in the World. Products developed by Brown\u2019s companies have also won a GreenState Award for Best Gummies, outperforming major brands such as Wana and Wyld. Beyond business, Brown has played an active role in cannabis policy, advocating at both the Minnesota State Capitol and in Washington, D.C., Steven helped shape Minnesota\u2019s low-dose THC market and expanding opportunities for hemp businesses. Brown has been featured in major media outlets including High Times, Fox, CBS, and WCCO.\"",
+      "presentationTitle": "State of the Hemp Market",
+      "sessionIds": [
+        "2026-04-10-ed-session-1-15"
+      ]
+    }
+  ],
+  "exhibitors": [
+    {
+      "id": "exhibitor-lagersmith",
+      "name": "Lagersmith",
+      "boothNumber": 1,
+      "email": "",
+      "website": "https://lagersmith.com",
+      "notes": "",
+      "sponsorLevel": "MN Brewers Cup Awards - Presenting Sponsor"
+    },
+    {
+      "id": "exhibitor-amoretti",
+      "name": "Amoretti",
+      "boothNumber": 10,
+      "email": "",
+      "website": "https://amoretti.com/",
+      "notes": "",
+      "sponsorLevel": "Bronze"
+    },
+    {
+      "id": "exhibitor-beverage-federation",
+      "name": "Beverage Federation",
+      "boothNumber": 11,
+      "email": "",
+      "website": "https://www.beveragefederation.com/catalog/",
+      "notes": "",
+      "sponsorLevel": "Bronze, Other"
+    },
+    {
+      "id": "exhibitor-rahrbsg",
+      "name": "RahrBSG",
+      "boothNumber": 12,
+      "email": "",
+      "website": "http://rahrbsg.com",
+      "notes": "",
+      "sponsorLevel": "Bronze"
+    },
+    {
+      "id": "exhibitor-brewbill",
+      "name": "BrewBill",
+      "boothNumber": 13,
+      "email": "",
+      "website": "https://www.brewbill.com/home/index.html",
+      "notes": "",
+      "sponsorLevel": "Bronze"
+    },
+    {
+      "id": "exhibitor-hart-print",
+      "name": "Hart Print",
+      "boothNumber": 14,
+      "email": "",
+      "website": "https://hartprint.com/",
+      "notes": "",
+      "sponsorLevel": "Silver, Beer"
+    },
+    {
+      "id": "exhibitor-country-malt-group",
+      "name": "Country Malt Group",
+      "boothNumber": 15,
+      "email": "",
+      "website": "https://www.countrymalt.com/",
+      "notes": "",
+      "sponsorLevel": "Silver, Beer"
+    },
+    {
+      "id": "exhibitor-northern-diversified-solutions",
+      "name": "Northern Diversified Solutions",
+      "boothNumber": 16,
+      "email": "",
+      "website": "https://northerndiversified.com/",
+      "notes": "",
+      "sponsorLevel": "Silver, Lunch"
+    },
+    {
+      "id": "exhibitor-all-energy-solar",
+      "name": "All Energy Solar",
+      "boothNumber": 17,
+      "email": "",
+      "website": "https://www.allenergysolar.com/",
+      "notes": "",
+      "sponsorLevel": "Silver, Coffee"
+    },
+    {
+      "id": "exhibitor-husch-blackwell",
+      "name": "Husch Blackwell",
+      "boothNumber": 2,
+      "email": "",
+      "website": "http://www.huschblackwell.com",
+      "notes": "",
+      "sponsorLevel": "Platinum"
+    },
+    {
+      "id": "exhibitor-john-i-haas",
+      "name": "John I Haas",
+      "boothNumber": 3,
+      "email": "",
+      "website": "https://www.johnihaas.com",
+      "notes": "",
+      "sponsorLevel": "Silver, Breakfast/Bloody Mary Bar"
+    },
+    {
+      "id": "exhibitor-ogden-glazer-schaefer",
+      "name": "Ogden Glazer + Schaefer",
+      "boothNumber": 4,
+      "email": "",
+      "website": "https://ogs.law/",
+      "notes": "",
+      "sponsorLevel": "Silver, Snacks"
+    },
+    {
+      "id": "exhibitor-minnesota-chamber-environmental-sustainability-foundation",
+      "name": "Minnesota Chamber Environmental Sustainability Foundation",
+      "boothNumber": 5,
+      "email": "",
+      "website": "https://www.mnchamber.com/minnesota-chamber-environmental-sustainability-foundation",
+      "notes": "",
+      "sponsorLevel": "Silver, Lunch"
+    },
+    {
+      "id": "exhibitor-laker-promotions",
+      "name": "Laker Promotions",
+      "boothNumber": 6,
+      "email": "",
+      "website": "https://www.lakerpromotions.com/",
+      "notes": "",
+      "sponsorLevel": "Silver"
+    },
+    {
+      "id": "exhibitor-swedebro",
+      "name": "SwedeBro",
+      "boothNumber": 7,
+      "email": "",
+      "website": "http://www.swedebro.com",
+      "notes": "",
+      "sponsorLevel": "Bronze"
+    },
+    {
+      "id": "exhibitor-sennos",
+      "name": "Sennos",
+      "boothNumber": 8,
+      "email": "",
+      "website": "https://www.sennos.com/",
+      "notes": "",
+      "sponsorLevel": "Bronze"
+    },
+    {
+      "id": "exhibitor-escarpment-labs",
+      "name": "Escarpment Labs",
+      "boothNumber": 9,
+      "email": "",
+      "website": "https://escarpmentlabs.com/en-us",
+      "notes": "",
+      "sponsorLevel": "Bronze"
+    },
+    {
+      "id": "exhibitor-loons-eye-digital",
+      "name": "Loons Eye Digital",
+      "boothNumber": "Blue Heron - Exhibitor",
+      "email": "",
+      "website": "https://www.loonseyedigital.com/",
+      "notes": "",
+      "sponsorLevel": "Exhibitor"
+    },
+    {
+      "id": "exhibitor-lucid-content-consulting",
+      "name": "Lucid Content Consulting",
+      "boothNumber": "Blue Heron - Exhibitor",
+      "email": "",
+      "website": "https://www.lucidcoco.com/",
+      "notes": "",
+      "sponsorLevel": "Exhibitor"
+    },
+    {
+      "id": "exhibitor-minnesota-department-of-veterans-affairs",
+      "name": "Minnesota Department of Veterans Affairs",
+      "boothNumber": "Blue Heron - Exhibitor",
+      "email": "",
+      "website": "https://mn.gov/mdva/",
+      "notes": "",
+      "sponsorLevel": "Exhibitor"
+    },
+    {
+      "id": "exhibitor-ostrichized-brewing",
+      "name": "Ostrichized Brewing",
+      "boothNumber": "Blue Heron - Exhibitor",
+      "email": "",
+      "website": "https://ostrichized.com/",
+      "notes": "",
+      "sponsorLevel": "Exhibitor"
+    },
+    {
+      "id": "exhibitor-scoreboard-social",
+      "name": "Scoreboard Social",
+      "boothNumber": "Blue Heron - Exhibitor",
+      "email": "",
+      "website": "https://playscoreboardsocial.com/",
+      "notes": "",
+      "sponsorLevel": "Exhibitor"
+    }
+  ],
+  "sponsors": [
+    {
+      "id": "exhibitor-all-energy-solar",
+      "name": "All Energy Solar",
+      "level": "Silver",
+      "package": "Silver, Coffee"
+    },
+    {
+      "id": "exhibitor-amoretti",
+      "name": "Amoretti",
+      "level": "Bronze",
+      "package": "Bronze"
+    },
+    {
+      "id": "exhibitor-beverage-federation",
+      "name": "Beverage Federation",
+      "level": "Bronze",
+      "package": "None, other partnership, Bronze"
+    },
+    {
+      "id": "exhibitor-brewbill",
+      "name": "BrewBill",
+      "level": "Bronze",
+      "package": "Bronze"
+    },
+    {
+      "id": "exhibitor-country-malt-group",
+      "name": "Country Malt Group",
+      "level": "Silver",
+      "package": "Silver, Beer (1/2)"
+    },
+    {
+      "id": "exhibitor-hart-print",
+      "name": "Hart Print",
+      "level": "Silver",
+      "package": "Silver, Beer (2.2)"
+    },
+    {
+      "id": "exhibitor-husch-blackwell",
+      "name": "Husch Blackwell",
+      "level": "Platinum",
+      "package": "Platinum"
+    },
+    {
+      "id": "exhibitor-john-i-haas",
+      "name": "John I Haas",
+      "level": "Silver",
+      "package": "Silver, Breakfast/Bloody Mary"
+    },
+    {
+      "id": "exhibitor-lagersmith",
+      "name": "Lagersmith",
+      "level": "Presenting Sponsor",
+      "package": "Awards Presenting Sponsor + Exhibitor Booth by Ballroom"
+    },
+    {
+      "id": "exhibitor-laker-promotions",
+      "name": "Laker Promotions",
+      "level": "Exhibitor",
+      "package": "Side Room"
+    },
+    {
+      "id": "exhibitor-loons-eye-digital",
+      "name": "Loons Eye Digital",
+      "level": "Exhibitor",
+      "package": "Side Room"
+    },
+    {
+      "id": "exhibitor-lucid-content-consulting",
+      "name": "Lucid Content Consulting",
+      "level": "Exhibitor",
+      "package": "Side Room"
+    },
+    {
+      "id": "exhibitor-malteurop",
+      "name": "Malteurop",
+      "level": "Raffle Only",
+      "package": "RAFFLE ONLY"
+    },
+    {
+      "id": "exhibitor-minnesota-chamber-environmental-sustainability-foundation",
+      "name": "Minnesota Chamber Environmental Sustainability Foundation",
+      "level": "Silver",
+      "package": "Silver, Lunch"
+    },
+    {
+      "id": "exhibitor-northern-diversified-solutions",
+      "name": "Northern Diversified Solutions",
+      "level": "Silver",
+      "package": "Silver, Lunch"
+    },
+    {
+      "id": "exhibitor-ogden-glazer-schaefer",
+      "name": "Ogden Glazer + Schaefer",
+      "level": "Silver",
+      "package": "Silver, Snacks"
+    },
+    {
+      "id": "exhibitor-rahrbsg",
+      "name": "RahrBSG",
+      "level": "Bronze",
+      "package": "Bronze"
+    },
+    {
+      "id": "exhibitor-scoreboard-social",
+      "name": "Scoreboard Social",
+      "level": "Exhibitor",
+      "package": "Side Room"
+    },
+    {
+      "id": "exhibitor-swedebro",
+      "name": "SwedeBro",
+      "level": "Bronze",
+      "package": "Bronze, nonmember"
+    },
+    {
+      "id": "exhibitor-escarpment-labs",
+      "name": "Escarpment Labs",
+      "level": "Bronze",
+      "package": "Bronze"
+    },
+    {
+      "id": "exhibitor-ostrichized-brewing",
+      "name": "Ostrichized Brewing",
+      "level": "Exhibitor",
+      "package": "Side Room"
+    }
+  ],
+  "tracks": [
+    {
+      "track_id": "track-brewing-techniques-and-innovation",
+      "name": "Brewing Techniques & Innovation",
+      "icon": "leaf",
+      "color": "#4E7F4E"
+    },
+    {
+      "track_id": "track-business-and-operations",
+      "name": "Business & Operations",
+      "icon": "handshake",
+      "color": "#674530"
+    },
+    {
+      "track_id": "track-community-and-culture",
+      "name": "Community & Culture",
+      "icon": "users",
+      "color": "#7A5A43"
+    },
+    {
+      "track_id": "track-looking-to-the-future",
+      "name": "Looking to the Future",
+      "icon": "lightbulb",
+      "color": "#F2C969"
+    },
+    {
+      "track_id": "track-marketing-and-events",
+      "name": "Marketing & Events",
+      "icon": "megaphone",
+      "color": "#36A0B2"
+    },
+    {
+      "track_id": "track-social",
+      "name": "Social",
+      "icon": "message-circle",
+      "color": "#003B4A"
+    }
+  ],
+  "locations": [
+    {
+      "location_id": "location-back-hallway",
+      "name": "Back Hallway",
+      "location_type": "exhibitor_area",
+      "level": "",
+      "notes": ""
+    },
+    {
+      "location_id": "location-ballroom-hallway",
+      "name": "Ballroom Hallway",
+      "location_type": "exhibitor_area",
+      "level": "",
+      "notes": ""
+    },
+    {
+      "location_id": "location-blue-heron-colony",
+      "name": "Blue Heron Colony",
+      "location_type": "room",
+      "level": "",
+      "notes": ""
+    },
+    {
+      "location_id": "location-cardinals-perch",
+      "name": "Cardinals Perch",
+      "location_type": "room",
+      "level": "",
+      "notes": ""
+    },
+    {
+      "location_id": "location-eagles-nest",
+      "name": "Eagles Nest",
+      "location_type": "room",
+      "level": "",
+      "notes": ""
+    },
+    {
+      "location_id": "location-hawks-ridge",
+      "name": "Hawks Ridge",
+      "location_type": "room",
+      "level": "",
+      "notes": ""
+    },
+    {
+      "location_id": "location-main-hallway",
+      "name": "Main Hallway",
+      "location_type": "exhibitor_area",
+      "level": "",
+      "notes": ""
+    },
+    {
+      "location_id": "location-mallard-point",
+      "name": "Mallard Point",
+      "location_type": "room",
+      "level": "",
+      "notes": ""
+    },
+    {
+      "location_id": "location-minnesota-valley-ballroom",
+      "name": "Minnesota Valley Ballroom",
+      "location_type": "ballroom",
+      "level": "",
+      "notes": ""
+    },
+    {
+      "location_id": "location-owl-overlook",
+      "name": "Owl Overlook",
+      "location_type": "room",
+      "level": "",
+      "notes": ""
+    },
+    {
+      "location_id": "location-riverside",
+      "name": "Riverside",
+      "location_type": "room",
+      "level": "",
+      "notes": ""
+    },
+    {
+      "location_id": "location-side-room",
+      "name": "Side Room",
+      "location_type": "exhibitor_area",
+      "level": "",
+      "notes": ""
+    },
+    {
+      "location_id": "location-they-pick",
+      "name": "They Pick",
+      "location_type": "exhibitor_area",
+      "level": "",
+      "notes": ""
+    },
+    {
+      "location_id": "location-white-pelican-bay",
+      "name": "White Pelican Bay",
+      "location_type": "room",
+      "level": "",
+      "notes": ""
+    },
+    {
+      "location_id": "location-wood-duck-pond",
+      "name": "Wood Duck Pond",
+      "location_type": "room",
+      "level": "",
+      "notes": ""
+    },
+    {
+      "location_id": "location-woodlands",
+      "name": "Woodlands",
+      "location_type": "room",
+      "level": "",
+      "notes": ""
+    }
+  ],
+  "raffles": [
+    {
+      "raffleNo": "1 - Lunch",
+      "companyName": "Amoretti",
+      "contactName": "Debra Coletti",
+      "contactEmail": "debra@amoretti.com",
+      "contactPhone": "(717) 503-1581",
+      "description": "Solo Stove - Smokeless Fire Pit",
+      "estimatedValueUsd": 300
+    },
+    {
+      "raffleNo": "2 - Lunch",
+      "companyName": "Scoreboard Social",
+      "contactName": "Jeff Lee",
+      "contactEmail": "jeff@playscoreboardsocial.com",
+      "contactPhone": "(612) 208-2851",
+      "description": "Scoreboard Social for all 17 Vikings regular-season games. We turn Vikings games into more engaging events for your guests by building community and giving people more reasons to talk to each other during the game. Guests play a live prediction game on their phones by scanning a QR code and making predictions throughout the game, competing on a live leaderboard with winners each quarter and at the end of the game.",
+      "estimatedValueUsd": 425
+    },
+    {
+      "raffleNo": "3 - Closing",
+      "companyName": "Hart Print",
+      "contactName": "Patrick Campbell",
+      "contactEmail": "patrick.campbell@hartprint.com",
+      "contactPhone": "",
+      "description": "\ud83c\udf89 $500 OFF YOUR NEXT CAN ORDER \ud83c\udf89\n Take your next release to the next level with $500 off Hart Print\u2019s digitally printed cans. Stand out on the shelf with premium, full-color designs built for flexibility and speed.\n \n To claim your prize, reach out to Patrick Campbell to receive your coupon code. Valid for use on your next order and must be redeemed within six months of receipt.",
+      "estimatedValueUsd": 500
+    },
+    {
+      "raffleNo": "4 - Closing",
+      "companyName": "Northern Diversified Solutions",
+      "contactName": "Eli Olson",
+      "contactEmail": "eli.olson@northerndiversified.com",
+      "contactPhone": "(507) 720-1855",
+      "description": "Northern Diversified Solutions is providing $1,000 in product to MN Craft Brewers Conference attendees. (Valid for new or existing customers)",
+      "estimatedValueUsd": 1000
+    },
+    {
+      "raffleNo": "5 - Closing",
+      "companyName": "Malteurop Malting Company",
+      "contactName": "Jen Zimmerman",
+      "contactEmail": "jen.zimmerman@malteurop.com",
+      "contactPhone": "(414) 208-7850",
+      "description": "1 pallet of either 2-Row or Pilsen malt",
+      "estimatedValueUsd": 1000
+    }
+  ]
+}

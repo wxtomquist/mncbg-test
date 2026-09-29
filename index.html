@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Minnesota Craft Brewers Guild event guide." />
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#0b0c10">
+  <script src="/theme.js"></script>
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="MNCBG Events">
+  <link rel="apple-touch-icon" href="/icons/icon-192.png">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/app.css" />
+  <link rel="stylesheet" href="/theme.css" />
+  <link rel="stylesheet" href="/unified.css" />
+  <title>Minnesota Craft Brewers Guild</title>
+</head>
+<body class="guild-page">
+  <section class="events-hero" aria-labelledby="eventsTitle">
+    <div class="events-hero-inner">
+      <div>
+        <div class="home-eyebrow">MNCBG Events</div>
+        <h1 id="eventsTitle">Minnesota Craft Brewers Guild</h1>
+        <p>Schedules, festival guides, beverage lists, maps, and event resources—all in one place.</p>
+      </div>
+      <div class="guild-mark" aria-hidden="true">
+        <img src="/icons/logo_small.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <main class="events-section">
+    <div class="event-grid" aria-label="Guild events">
+      <a class="event-card mbc" href="/mbc/">
+        <span class="event-kind">Conference</span>
+        <div class="event-code" aria-hidden="true">MBC</div>
+        <h2>Minnesota Brewers Conference</h2>
+        <p>Conference schedule, presenters, exhibitors, maps, raffle information, and your saved sessions.</p>
+        <div class="event-action"><span>Open conference</span><span class="event-arrow" aria-hidden="true">→</span></div>
+      </a>
+
+      <a class="event-card apn" href="/apn/">
+        <span class="event-kind">Festival</span>
+        <div class="event-code" aria-hidden="true">APN</div>
+        <h2>All Pints North</h2>
+        <p>Festival information, beverage list, guide, map, and your personal sample list.</p>
+        <div class="event-action"><span>Open festival</span><span class="event-arrow" aria-hidden="true">→</span></div>
+      </a>
+
+      <a class="event-card abr" href="/abr/">
+        <span class="event-kind">Festival</span>
+        <div class="event-code" aria-hidden="true">ABR</div>
+        <h2>Autumn Brew Review</h2>
+        <p>Festival information, beverage list, guide, map, and your personal sample list.</p>
+        <div class="event-action"><span>Open festival</span><span class="event-arrow" aria-hidden="true">→</span></div>
+      </a>
+
+      <a class="event-card guild-site" href="https://www.mncraftbrew.org/" target="_blank" rel="noopener">
+        <div class="event-code" aria-hidden="true">WEB</div>
+        <h2>MNCBG Website</h2>
+        <p>Guild news, brewery resources, membership information, and upcoming events.</p>
+        <div class="event-action"><span>Visit website</span><span class="event-arrow" aria-hidden="true">↗</span></div>
+      </a>
+    </div>
+  </main>
+
+  <footer class="landing-footer">
+    <a href="/privacy.html">Privacy Policy</a>
+  </footer>
+
+  <script src="/update-banner.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js', { scope: '/' })
+          .catch(err => console.log('SW registration failed:', err));
+      });
+    }
+  </script>
+</body>
+</html>

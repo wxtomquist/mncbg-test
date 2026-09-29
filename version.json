@@ -1,0 +1,10 @@
+{
+  "version": "2.0.14-preview",
+  "date": "2026-09-29",
+  "severity": "minor",
+  "notes": [
+    "Design-preview build: unified visual system across the Events landing page, MBC, APN, ABR, and Privacy Policy.",
+    "Standardized headers, cards, navigation, spacing, typography, theme controls, and mobile behavior while preserving event-specific accent colors.",
+    "No event data, sample-list namespaces, beverage data, guide assets, map assets, or conference functionality were intentionally changed."
+  ]
+}

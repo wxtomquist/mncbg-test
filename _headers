@@ -1,0 +1,15 @@
+/sw.js
+  Cache-Control: no-cache
+
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/manifest.webmanifest
+  Cache-Control: no-cache
+  Content-Type: application/manifest+json
+
+/version.json
+  Cache-Control: no-store, no-cache, must-revalidate, max-age=0
+
+/abr/icons/abr-guide-2026.pdf
+  Cache-Control: no-store, no-cache, must-revalidate, max-age=0

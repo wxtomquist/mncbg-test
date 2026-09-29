@@ -1,0 +1,57 @@
+{
+  "id": "/",
+  "name": "Minnesota Craft Brewers Guild Events",
+  "short_name": "MNCBG Events",
+  "description": "One app for Minnesota Craft Brewers Guild events, including the Minnesota Brewers Conference, All Pints North, and Autumn Brew Review.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "theme_color": "#0b0c10",
+  "background_color": "#0b0c10",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Minnesota Brewers Conference",
+      "short_name": "MBC",
+      "url": "/mbc/",
+      "icons": [
+        {
+          "src": "/icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "All Pints North",
+      "short_name": "APN",
+      "url": "/apn/",
+      "icons": [
+        {
+          "src": "/icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "prefer_related_applications": false
+}

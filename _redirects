@@ -1,0 +1,8 @@
+# Legacy All Pints North root routes -> unified /apn/ section.
+/apn.html /apn/ 301
+/list.html /apn/list.html 301
+/guide.html /apn/guide.html 301
+/map.html /apn/map.html 301
+/sample-list.html /apn/sample-list.html 301
+/print.html /apn/print.html 301
+/beverages /apn/beverages 301
